@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jibby's Game Dev Journey</title>
+    <title>Jibby's Corner</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
         <div class="container">
-            <h1>Jibby's Game Dev Journey</h1>
+            <h1><a href="index.html" style="color: white; text-decoration: none;">Home</a></h1>
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <!-- Added Resume Link -->
+                    <li><a href="Tech_CV.pdf" target="_blank" class="nav-resume-button">Resume</a></li>
                 </ul>
             </nav>
         </div>
@@ -23,81 +27,200 @@
 
     <section id="intro" class="hero">
         <div class="container">
-            <h2>Welcome to my Game Development Journey</h2>
+            <h2>Hi! Welcome to my Portfolio!</h2>
             <p>I'm documenting my progress, sharing my projects, and learning in public.</p>
         </div>
     </section>
 
+    <!-- Start of About section -->
     <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I'm an aspiring game developer passionate about creating interactive experiences. This site documents my journey, projects, and what I'm learning along the way.</p>
-            <p>My goal is to create engaging games and eventually land a job in the game industry.</p>
-        </div>
-    </section>
-
-    <section id="blog">
-        <div class="container">
-            <h2>Blog</h2>
-            <div class="blog-posts">
-                <article>
-                    <h3>Beginning My Game Dev Journey</h3>
-                    <p class="date">April 4, 2025</p>
-                    <p>My first steps into game development and what I've learned so far...</p>
-                    <a href="#" class="read-more">Read More</a>
-                </article>
-                
-                <article>
-                    <h3>Learning Game Design Fundamentals</h3>
-                    <p class="date">April 2, 2025</p>
-                    <p>An overview of key game design principles that I'm studying...</p>
-                    <a href="#" class="read-more">Read More</a>
-                </article>
+        <div class="container about-container">
+            <div class="about-image">
+                <img src="images/profile.jpg" alt="Jibril Abdulazeez Profile Picture">
+                <!-- Make sure profile.jpg exists -->
+            </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    Hi! I'm Jibril Abdulazeez, a 23-year-old aspiring game developer based in Dublin, Ireland. I'm
+                    passionate about crafting engaging interactive experiences and bringing digital worlds to life.
+                </p>
+                <p>
+                    My journey combines a strong technical foundation from my BSc in Computer Science (TU Dublin,
+                    Tallaght) with a creative and user-centered approach gained through my current MSc in Creative
+                    Digital Media & UX (TU Dublin, Grangegorman). This unique blend allows me to tackle both the
+                    programming challenges and the design intricacies involved in game development.
+                </p>
+                <p>
+                    I'm particularly fascinated by implementing novel gameplay mechanics. I enjoy the entire process,
+                    from initial
+                    concept to polished product.
+                </p>
+                <p>
+                    This website serves as my portfolio and a chronicle of my game development journey as I learn,
+                    build, and work towards my goal of contributing my skills to the exciting game industry.
+                </p>
             </div>
         </div>
     </section>
+    <!-- End of About section -->
 
+    <!-- START: Skills Section -->
+    <section id="skills"> <!-- Removed inline style, added to CSS -->
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming & Tech</h3>
+                    <ul>
+                        <li>C# (Unity)</li>
+                        <li>C++ (Basic)</li>
+                        <li>Python (Basic)</li>
+                        <li>JavaScript (Web/Interactive)</li>
+                        <li>HTML / CSS</li>
+                        <li>Version Control (Git/GitHub)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Game Engines & Tools</h3>
+                    <ul>
+                        <li>Unity Engine (Intermediate)</li>
+                        <li>Unreal Engine (Basic)</li>
+                        <li>Aseprite (Pixel Art)</li>
+                        <li>Figma</li>
+                        <li>Adobe Suite</li>
+                        <li>FMOD (Audio Implementation)</li>
+                        <!-- Add tools like Trello/Jira if applicable -->
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Design & UX</h3>
+                    <ul>
+                        <li>Game Design Principles</li>
+                        <li>Narrative Design</li>
+                        <li>User Experience (UX) Research</li>
+                        <li>Wireframing / Prototyping</li>
+                        <li>User Interface (UI) Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END: Skills Section -->
+
+
+    <!-- START: Projects section -->
     <section id="projects">
         <div class="container">
             <h2>Projects</h2>
+            <!-- Added project-cards div for grid layout -->
+
+            <!-- Knock Knock -->
             <div class="project-cards">
                 <div class="project">
-                    <h3>2D Platformer</h3>
-                    <p>A simple platformer built with Unity featuring pixel art graphics.</p>
-                    <div class="project-links">
-                        <a href="#">Play</a>
-                        <a href="#">View Code</a>
+                    <div class="project-media">
+                        <img src="images/knockknock/peeking.gif" alt="Knock Knock" class="project-gif">
+                    </div>
+                    <div class="project-info">
+                        <h3>Knock Knock</h3>
+                        <div class="project-tech">
+                            <span>Unity</span>
+                            <span>C#</span>
+                        </div>
+                        <p>"Knock Knock" is a first-person psychological horror game proof of concept where you're alone
+                            in your
+                            apartment with mysterious visitors knocking at your door. Players must decide whether to
+                            open the door to safe characters or ignore dangerous "mimics" by using the peephole and
+                            analysing voice lines. The game creates tension through uncertainty and consequences for
+                            each decision.
+                            I got my friends to record some unique lines!</p>
+                        <ul class="project-highlights">
+                            <li>Dynamic character management with randomised selection.</li>
+                            <li>Adaptive anxiety system with audio-based emotional state.</li>
+                            <li>Immersive door interaction with proximity-triggered mechanics.
+                            </li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://jibbyie.itch.io/knock-knock-poc" class="btn-play">Play Demo</a>
+                            <a href="https://github.com/Jibbyie/Knock_Knock" class="btn-code">View Code</a>
+                            <a href="projects/knockknock.html" class="btn-details">Project Details</a>
+                        </div>
                     </div>
                 </div>
-                
+
+                <!-- Lights Out -->
                 <div class="project">
-                    <h3>Interactive Story</h3>
-                    <p>A text-based adventure game with branching narratives.</p>
-                    <div class="project-links">
-                        <a href="#">Play</a>
-                        <a href="#">View Code</a>
+                    <div class="project-media">
+                        <img src="images/gif2.gif" alt="Lights Out" class="project-gif">
+                    </div>
+                    <div class="project-info">
+                        <h3>Lights Out</h3>
+                        <div class="project-tech">
+                            <span>Unity</span>
+                            <span>C#</span>
+                        </div>
+                        <p>A text-based adventure game with branching narratives, player choices, and multiple endings.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Branching dialogue system</li>
+                            <li>Save/load functionality</li>
+                            <li>Dynamic soundtrack</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://jibbyie.itch.io/lights-out" class="btn-play">Play Demo</a>
+                            <a href="https://github.com/Jibbyie/Lights_Out" class="btn-code">View Code</a>
+                            <a href="projects/lightsout.html" class="btn-details">Project Details</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+
+                <!-- Add more <div class="project">...</div> elements here for future projects -->
+
+            </div> <!-- End project-cards -->
         </div>
     </section>
+    <!-- END: Projects section -->
 
+    <!-- START: Contact section with Icons -->
     <section id="contact">
         <div class="container">
             <h2>Connect With Me</h2>
             <div class="social-links">
-                <a href="https://github.com/jibbyie" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-                <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
-                <a href="https://jibbyie.itch.io" target="_blank">Itch.io</a>
+                <!-- GitHub -->
+                <a href="https://github.com/jibbyie" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com/in/jibrilabdulazeez" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <!-- Instagram (Make sure the link is correct or remove if not used) -->
+                <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer"
+                    aria-label="Instagram Profile">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <!-- Itch.io -->
+                <a href="https://jibbyie.itch.io" target="_blank" rel="noopener noreferrer"
+                    aria-label="Itch.io Profile">
+                    <i class="fab fa-itch-io"></i> <!-- Font Awesome has an itch.io icon! -->
+                </a>
+                <!-- Example: Email -->
+                <!-- <a href="mailto:your.email@example.com" aria-label="Send Email">
+                    <i class="fas fa-envelope"></i>
+                </a> -->
             </div>
         </div>
     </section>
 
+    <!-- END: Contact section with Icons -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Jibby's Game Dev Journey</p>
+            <p>© 2024 Jibby's Game Dev Journey</p> <!-- Updated year -->
         </div>
     </footer>
+    <script src="https://kit.fontawesome.com/c484d70e2a.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

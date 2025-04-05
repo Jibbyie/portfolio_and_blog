@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knock Knock | Game Dev Project</title> <!-- Updated Title -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project-details.css"> <!-- Links to CSS -->
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <!-- H1 is now a link pointing UP one level to index.html -->
+            <h1><a href="../index.html" style="color: white; text-decoration: none;">Home</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                    <!-- Resume Link (path relative to index.html) -->
+                    <li><a href="../Jibril_Abdulazeez_Resume.pdf" target="_blank" class="nav-resume-button">Resume</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container project-detail">
+        <h1>Knock Knock</h1> <!-- Heading Specific to this Project -->
+
+        <div class="project-showcase">
+            <div class="main-media">
+                <!-- Main Showcase GIF for this project -->
+                <img src="../images/knockknock/peeking.gif" alt="Knock Knock Gameplay Snippet">
+            </div>
+            <div class="project-gallery">
+                <!-- Gallery GIFs: Replace with actual relevant GIFs -->
+                <img src="../images/knockknock/lookingaround.gif" alt="Environment" onclick="showImage(this.src)">
+                <img src="../images/knockknock/opendoor.gif" alt="Opening door" onclick="showImage(this.src)">
+                <img src="../images/knockknock/peeking.gif" alt="Peeking through door" onclick="showImage(this.src)">
+            </div>
+        </div>
+
+        <div class="project-meta">
+            <div class="meta-item">
+                <h3>Technologies</h3>
+                <!-- Tech specific to Platformer -->
+                <ul>
+                    <li>Unity Engine</li>
+                    <li>C# Programming</li>
+                </ul>
+            </div>
+            <div class="meta-item">
+                <h3>Timeline</h3>
+                <!-- Timeline for this project -->
+                <p>March 2025 - March 2025 ( 2 Days )</p> <!-- Example Date -->
+            </div>
+            <div class="meta-item">
+                <h3>Role</h3>
+                <p>Solo Developer</p>
+            </div>
+        </div>
+
+        <!-- Start of Modified Project Content with GIF Spots -->
+        <div class="project-content visually-focused-content">
+
+            <!-- Column 1: About & Process -->
+            <div class="content-column">
+
+                <div class="content-block">
+                    <h2>About the Project</h2>
+                    <!-- Optional Visual Spot 1 -->
+                    <!--   <div class="content-visual">
+                        <img src="../images/gif1-feature1.gif" alt="Knock Knock Gameplay">
+                    </div> -->
+                    <p>
+                        Knock Knock is Prototype #2 in a short horror game series where I explore concepts in 1–3 days,
+                        aiming for quick, minimum viable builds. More of a "demo reel" than a full game, it’s inspired
+                        by the Mandela Catalogue and the “fake humans” genre. Built in under three days with some voice
+                        help from friends, it’s part of a batch I’ll eventually refine into a full game based on
+                        feedback — possibly even my first Steam release.
+                    </p>
+                </div>
+
+                <div class="content-block">
+                    <h2>Development Process</h2>
+                    <!-- Optional Visual Spot 2 -->
+                    <!--   <div class="content-visual">
+                        <img src="../images/gif1-feature2.gif" alt="Knock Knock Gameplay">
+                    </div> -->
+                    <p>
+                        The development focused on creating immersive systems that build psychological tension. Key
+                        implementations include:
+                    </p>
+                    <ul>
+                        <!-- Learning points -->
+                        <li>A dynamic character system with safe and unsafe visitors.</li>
+                        <li>Peephole mechanics with smooth camera transitions and FOV animation.</li>
+                        <li>An anxiety system that distorts audio based on player decisions.
+                        </li>
+                        <li>Realistic movement and footstep systems.</li>
+                        <li>Voice line queueing and character management.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Column 2: Challenges & Learned -->
+            <div class="content-column">
+
+                <div class="content-block">
+                    <h2>Technical Challenges</h2>
+                    <!-- Optional Visual Spot 3 -->
+                    <!--  <div class="content-visual">
+                        <img src="../images/gif1-feature3.gif" alt="Platformer - Physics Interaction Debugging">
+                    </div> -->
+                    <ul>
+                        <!-- Learning points -->
+                        <li>Creating a believable risk/reward system around the peephole mechanic.</li>
+                        <li>Implementing subtle audio distortion that scales with player anxiety.</li>
+                        <li>Designing a character system that manages different visitor types and their voice lines.
+                        </li>
+                        <li>Building smooth transitions between normal view and peephole view.</li>
+                        <li>Creating appropriate feedback systems for player actions</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>What I Learned</h2>
+                    <!-- Optional Visual Spot 4 (e.g., particle effect) -->
+                    <!--  <div class="content-visual">
+                        <img src="../images/gif1-feature4.gif" alt="Platformer - Particle Effect Example">
+                    </div> -->
+                    <ul>
+                        <!-- Learning points -->
+                        <li>Character and audio management in Unity.</li>
+                        <li>Camera manipulation and smooth transitions.</li>
+                        <li>Player feedback systems through audio and visual cues.</li>
+                        <li>First-person controller refinement.</li>
+                        <li>Creating effective psychological horror through game mechanics.</li>
+                        <li>State management for gameplay elements.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- End of Modified Project Content with GIF Spots -->
+
+        <!-- Project Links remain the same structure -->
+        <div class="project-links">
+            <a href="https://jibbyie.itch.io/knock-knock-poc" class="btn-play">Play Demo</a>
+            <a href="https://github.com/Jibbyie/Knock_Knock" class="btn-code">View Source Code</a>
+            <a href="../index.html#projects" class="btn-back">Back to Projects</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Jibby's Game Dev Journey</p> <!-- Update year if needed -->
+        </div>
+    </footer>
+
+    <!-- Script for gallery image switching -->
+    <script>
+        function showImage(src) {
+            /* This function targets the image inside .main-media specifically */
+            const mainMediaImage = document.querySelector('.main-media img');
+            if (mainMediaImage) {
+                mainMediaImage.src = src;
+            } else {
+                console.error("Could not find element '.main-media img' to update src.");
+            }
+        }
+    </script>
+</body>
+
+</html>

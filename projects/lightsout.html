@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lights Out | Game Dev Project</title> <!-- Updated Title -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project-details.css"> <!-- Links to CSS -->
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <!-- H1 is now a link pointing UP one level to index.html -->
+            <h1><a href="../index.html" style="color: white; text-decoration: none;">Home</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                    <!-- Resume Link (path relative to index.html) -->
+                    <li><a href="../Jibril_Abdulazeez_Resume.pdf" target="_blank" class="nav-resume-button">Resume</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container project-detail">
+        <h1>Lights Out</h1> <!-- Heading Specific to this Project -->
+
+        <div class="project-showcase">
+            <div class="main-media">
+                <!-- Main Showcase GIF for this project -->
+                <img src="../images/gif2.gif" alt="Lights Out Gameplay Snippet">
+            </div>
+            <div class="project-gallery">
+                <!-- Gallery GIFs: Replace with actual relevant GIFs -->
+                <img src="../images/placeholder-gallery-1.gif" alt="Placeholder GIF 1" onclick="showImage(this.src)">
+                <img src="../images/placeholder-gallery-2.gif" alt="Placeholder GIF 2" onclick="showImage(this.src)">
+                <img src="../images/placeholder-gallery-3.gif" alt="Placeholder GIF 3" onclick="showImage(this.src)">
+            </div>
+        </div>
+
+        <div class="project-meta">
+            <div class="meta-item">
+                <h3>Technologies</h3>
+                <!-- Tech specific to Interactive Story -->
+                <ul>
+                    <li>JavaScript (ES6+)</li>
+                    <li>HTML / CSS</li>
+                    <li>Narrative Design</li>
+                    <li>JSON (for story data)</li>
+                </ul>
+            </div>
+            <div class="meta-item">
+                <h3>Timeline</h3>
+                <!-- Timeline for this project -->
+                <p>April 2025 - April 2025 ( 3 Days )</p> <!-- Example Date -->
+            </div>
+            <div class="meta-item">
+                <h3>Role</h3>
+                <p>Solo Developer</p>
+            </div>
+        </div>
+
+        <!-- Start of Modified Project Content with GIF Spots -->
+        <div class="project-content visually-focused-content">
+
+            <!-- Column 1: About & Process -->
+            <div class="content-column">
+
+                <div class="content-block">
+                    <h2>About the Project</h2>
+                    <!-- Optional Visual Spot 1 -->
+                  <!--   <div class="content-visual">
+                        <img src="../images/gif2-feature1.gif" alt="Interactive Story - Branching Dialogue Example">
+                    </div> -->
+                    <p>
+                        A branching narrative experience created with JavaScript, HTML, and CSS. Explores player choice
+                        and consequence within a text-based format.
+                    </p>
+                </div>
+
+                <div class="content-block">
+                    <h2>Development Process</h2>
+                    <!-- Optional Visual Spot 2 -->
+                   <!--  <div class="content-visual">
+                        <img src="../images/gif2-feature2.gif" alt="Interactive Story - State Management Concept">
+                    </div> -->
+                    <p>
+                        Focused on narrative structure first (using JSON data), then built the JS engine to handle
+                        choices, state, and dynamic text display. Styled with CSS for readability.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Column 2: Challenges & Learned -->
+            <div class="content-column">
+
+                <div class="content-block">
+                    <h2>Technical Challenges</h2>
+                    <!-- Optional Visual Spot 3 -->
+                   <!--  <div class="content-visual">
+                        <img src="../images/gif2-feature3.gif" alt="Interactive Story - Saving Progress Snippet">
+                    </div> -->
+                    <p>
+                        Key challenge: Managing complex narrative branching logic and player state persistence
+                        efficiently, especially with save/load functionality.
+                    </p>
+                </div>
+
+                <div class="content-block">
+                    <h2>What I Learned</h2>
+                    <!-- Optional Visual Spot 4 (e.g., showing UI update) -->
+                   <!--  <div class="content-visual">
+                        <img src="../images/gif2-feature4.gif" alt="Interactive Story - DOM Update Example">
+                    </div> -->
+                    <ul>
+                        <li>Advanced DOM Manipulation (JS)</li>
+                        <li>State Management in Frontend JS</li>
+                        <li>Narrative Design Patterns</li>
+                        <li>Structuring Story Data (JSON)</li>
+                        <li>Implementing Save/Load</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- End of Modified Project Content with GIF Spots -->
+
+        <!-- Project Links remain the same structure -->
+        <div class="project-links">
+            <a href="https://jibbyie.itch.io/lights-out" class="btn-play">Play Demo</a>
+            <a href="https://github.com/Jibbyie/Lights_Out" class="btn-code">View Source Code</a>
+            <a href="../index.html#projects" class="btn-back">Back to Projects</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Jibby's Game Dev Journey</p> <!-- Update year if needed -->
+        </div>
+    </footer>
+
+    <!-- Script for gallery image switching -->
+    <script>
+        function showImage(src) {
+            document.querySelector('.main-media img').src = src;
+        }
+    </script>
+</body>
+
+</html>

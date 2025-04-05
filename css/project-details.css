@@ -1,0 +1,256 @@
+
+/* Project Details Page Styles */
+.project-detail {
+    padding: 50px 20px;
+}
+
+.project-detail h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    text-align: center; /* Center the main project title */
+}
+
+/* Showcase Section */
+.project-showcase {
+    margin-bottom: 30px; /* Reduced margin */
+}
+
+.main-media {
+    width: 100%;
+    height: 450px; /* Default height */
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #eee; /* Placeholder background */
+    border: 1px solid #ddd;
+}
+
+.main-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Slightly larger min size */
+    gap: 10px;
+}
+
+.project-gallery img {
+    width: 100%;
+    height: 100px; /* Increased height */
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #ddd; /* Placeholder background */
+    border: 1px solid #ccc;
+}
+
+.project-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Meta Data Section */
+.project-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px; /* Reduced gap */
+    margin-bottom: 30px; /* Consistent margin */
+    padding: 15px 20px; /* Adjusted padding */
+    background-color: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.meta-item h3 {
+    font-size: 1.1rem; /* Adjusted size */
+    color: #2c3e50;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+}
+
+.meta-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.meta-item li,
+.meta-item p {
+    margin-bottom: 5px;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+/* Content Area with Visuals */
+.visually-focused-content {
+    margin-top: 0; /* Removed top margin as meta is above */
+    margin-bottom: 40px; /* Space below content before links */
+    background-color: transparent; /* Removed background, rely on blocks */
+    padding: 0; /* Removed padding, rely on blocks */
+    border-radius: 0; /* Removed border-radius */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Individual Content Block (Heading + Visual + Text/List) */
+.content-block {
+    background-color: #ffffff; /* White background for each block */
+    padding: 20px 25px; /* Padding inside block */
+    border-radius: 8px; /* Rounded corners for block */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow */
+    border: 1px solid #e2e8f0; /* Light border */
+    overflow: hidden; /* Contains floats */
+}
+.content-block:last-child {
+    margin-bottom: 0;
+}
+
+/* Inline Visual (GIF) Spot */
+.content-visual {
+    width: 100%; /* Full width on mobile */
+    max-width: 400px; /* Max width */
+    margin: 0 auto 20px auto; /* Center on mobile, space below */
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+}
+
+.content-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Content Text Styling */
+.visually-focused-content h2 {
+    font-size: 1.4rem; /* Adjusted size */
+    margin-top: 0;
+    margin-bottom: 15px; /* Increased space below heading */
+    padding-bottom: 5px;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+}
+
+.visually-focused-content p,
+.visually-focused-content li {
+    font-size: 0.95rem;
+    line-height: 1.6; /* Slightly increased line height */
+    color: #4a5568;
+}
+
+.visually-focused-content p {
+    margin-bottom: 10px; /* Space below paragraphs */
+}
+
+.visually-focused-content ul {
+    padding-left: 20px;
+    margin-top: 10px; /* Space above list */
+    margin-bottom: 0;
+}
+.visually-focused-content li {
+     margin-bottom: 8px;
+}
+
+/* Project Links Section */
+.project-links {
+    display: flex;
+    justify-content: center; /* Center buttons */
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 0; /* Remove top margin as content block provides space */
+    padding-top: 20px; /* Add padding above links */
+    border-top: 1px solid #e2e8f0; /* Separator line */
+}
+
+.project-links a {
+    padding: 10px 20px;
+    border-radius: 5px; /* Slightly more rounded */
+    font-weight: 500;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+/* Reusing button styles from style.css, ensure they exist there */
+/* .btn-play, .btn-code, .btn-details, .btn-back */
+.btn-back { /* Specific style from previous CSS */
+    background-color: #718096;
+    color: white;
+}
+.btn-back:hover {
+    background-color: #4a5568;
+}
+
+
+/* --- Responsive Adjustments --- */
+
+/* Medium Screens and Up (Tablets, Desktops) */
+@media (min-width: 768px) {
+    .visually-focused-content {
+        flex-direction: row; /* Side-by-side columns */
+        gap: 30px; /* Adjust gap */
+        background-color: transparent; /* Ensure container is transparent */
+        padding: 0;
+        border-radius: 0;
+    }
+    .content-column {
+        flex: 1; /* Each column takes equal space */
+        /* Allow columns to stack blocks vertically */
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Space between blocks in the same column */
+    }
+
+    .content-block {
+        flex-grow: 1; /* Allow blocks to grow if needed, helps alignment */
+    }
+
+    /* Optional Float for Visuals on Desktop */
+     .content-visual {
+       float: right;
+       width: 45%;
+       max-width: 220px; /* Smaller max width when floated */
+       margin-left: 15px; /* Space to left */
+       margin-bottom: 10px; /* Space below */
+       margin-top: 5px; /* Align better with text */
+     }
+
+    .main-media {
+       height: 500px; /* Larger main image */
+    }
+
+    .project-meta {
+        gap: 20px; /* Restore original gap */
+    }
+}
+
+/* Smaller Screens */
+@media (max-width: 767px) {
+    .project-detail h1 {
+        font-size: 2rem; /* Smaller title on mobile */
+    }
+    .main-media {
+        height: 250px; /* Adjust height for mobile */
+    }
+    .project-gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on small screens */
+    }
+    .project-meta {
+        grid-template-columns: 1fr; /* Stack meta items */
+    }
+    .project-links {
+        flex-direction: column; /* Stack buttons */
+        align-items: center;
+    }
+    .project-links a {
+        width: 80%; /* Make buttons wider */
+        max-width: 300px;
+    }
+}
