@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lights Out | Horror Game Prototype</title>
+    <title>Multiplayer Prototype | Unity Netcode Test</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/project-details.css">
     <link rel="icon" href="/jibby.jpg" type="image/x-icon">
@@ -28,16 +28,16 @@
     </header>
 
     <main class="container project-detail">
-        <h1>Lights Out</h1>
+        <h1>Multiplayer Prototype</h1>
 
         <div class="project-showcase">
             <div class="main-media">
-                <img src="../images/lightsout/main.gif" alt="Lights Out Gameplay">
+                <img src="../images/multiplayer/main.gif" alt="Multiplayer Test Gameplay">
             </div>
             <div class="project-gallery">
-                <img src="../images/lightsout/creepy1.gif" alt="Event Example" onclick="showImage(this.src)">
-                <img src="../images/lightsout/lightswitch.gif" alt="Switch Toggle" onclick="showImage(this.src)">
-                <img src="../images/lightsout/flicker.gif" alt="Flickering" onclick="showImage(this.src)">
+                <img src="../images/multiplayer/join.gif" alt="Lobby" onclick="showImage(this.src)">
+                <img src="../images/multiplayer/combat.gif" alt="Combat" onclick="showImage(this.src)">
+                <img src="../images/multiplayer/rematch.gif" alt="Rematch System" onclick="showImage(this.src)">
             </div>
         </div>
 
@@ -45,39 +45,39 @@
             <div class="meta-item">
                 <h3>Technologies</h3>
                 <ul>
-                    <li>Unity Engine (3D)</li>
+                    <li>Unity Netcode for GameObjects</li>
                     <li>C#</li>
                 </ul>
             </div>
             <div class="meta-item">
                 <h3>Timeline</h3>
-                <p>April 2025 (3 Days)</p>
+                <p>June 19th 2025 - June 21st 2025</p>
             </div>
             <div class="meta-item">
                 <h3>Role</h3>
                 <p>Solo Developer</p>
             </div>
         </div>
+
         <div class="project-content visually-focused-content">
             <div class="content-column">
                 <div class="content-block">
                     <h2>About the Project</h2>
                     <p>
-                        Lights Out is a short psychological horror prototype where your only goal is to survive by
-                        keeping the lights on. The longer you last, the more the room changes... and the more it wants
-                        you. It’s designed as a quick, tension-focused loop, built in 3 days as part of my ongoing
-                        horror experiments.
+                        This was my first real multiplayer project in Unity using NGO. It’s a 2D dash-and-damage
+                        prototype where up to 4 players can join, fight, and rematch in a networked arena.
+                        I built the full networking stack, player syncing, damage system, and win tracking from scratch.
                     </p>
                 </div>
 
                 <div class="content-block">
                     <h2>Technical Highlights</h2>
                     <ul>
-                        <li>Randomized light switch and event system for replayability.</li>
-                        <li>Timer-based blackout trigger with escalating consequences.</li>
-                        <li>Lighting control system to manipulate player tension and visibility.</li>
-                        <li>Audio layering and flicker effects tied to the event system.</li>
-                        <li>Fail states based on exposure to darkness and idle time.</li>
+                        <li>Spawn system that dynamically assigns prefabs and syncs ownership.</li>
+                        <li>Health syncing with NetworkVariables and RPC-based damage reporting.</li>
+                        <li>Dash collision logic with server-side validation to ensure fairness.</li>
+                        <li>Match win detection, synced game over UI, and rematch reset system.</li>
+                        <li>Client-specific UI updates including player names, HP bars, and match status.</li>
                     </ul>
                 </div>
             </div>
@@ -86,29 +86,43 @@
                 <div class="content-block">
                     <h2>Development Focus</h2>
                     <ul>
-                        <li>Creating horror without enemies — relying purely on lighting and suspense.</li>
-                        <li>Designing a modular event system with easy expansion.</li>
-                        <li>Keeping scope narrow while reinforcing replayability through randomness.</li>
-                        <li>Experimenting with pacing and moment-to-moment anxiety.</li>
+                        <li>Understanding authoritative server logic and network ownership.</li>
+                        <li>Building a fully network-safe player loop from join to rematch.</li>
+                        <li>Managing client sync, disconnections, and UI states reliably.</li>
+                        <li>Learning the limits of RPCs, NetworkVariables, and scene objects.</li>
                     </ul>
                 </div>
 
                 <div class="content-block">
                     <h2>What I Learned</h2>
                     <ul>
-                        <li>How to build and manage random events in Unity.</li>
-                        <li>Minimalistic horror design focused on player perception.</li>
-                        <li>Keeping scope tight to ensure completion without burnout.</li>
-                        <li>Balancing tension through light mechanics and pacing.</li>
+                        <li>How to structure a clean, server-authoritative multiplayer loop in Unity.</li>
+                        <li>Dealing with sync issues and ownership logic bugs in NGO.</li>
+                        <li>Using RPCs properly alongside NetworkVariables.</li>
+                        <li>The importance of separating concerns to avoid spaghetti code.</li>
+                        <li>Why modular design matters in multiplayer systems.</li>
                     </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>What I’d Improve On</h2>
+                    <p>
+                        Honestly, the code is kind of slapped together. A lot of systems are overly coupled —
+                        for example, <code>PlayerMove.cs</code> handles movement, dash logic, damage processing,
+                        health syncing, collision events, and UI updates… basically everything. It works, but it's
+                        messy.
+                        I’d refactor it to break up responsibilities properly and make things modular.
+                        Right now, a bunch of scripts are too tightly connected, which makes scaling or reusing
+                        them difficult. I want to revisit this from scratch and rebuild it more cleanly in the future.
+                    </p>
                 </div>
             </div>
         </div>
 
 
         <div class="project-links">
-            <a href="https://jibbyie.itch.io/lights-out" class="btn-play" target="_blank"
-                rel="noopener noreferrer">Download Demo</a>
+            <a href="https://github.com/Jibbyie/game-a-week/tree/origin/Multiplayer_NGO_Race" class="btn-code"
+                target="_blank" rel="noopener noreferrer">View Source Code</a>
             <a href="../index.html#projects" class="btn-back">Back to Projects</a>
         </div>
     </main>

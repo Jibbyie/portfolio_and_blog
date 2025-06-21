@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lights Out | Horror Game Prototype</title>
+    <title>Slimey | Grappling Hook Tech Demo</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/project-details.css">
     <link rel="icon" href="/jibby.jpg" type="image/x-icon">
@@ -28,16 +28,16 @@
     </header>
 
     <main class="container project-detail">
-        <h1>Lights Out</h1>
+        <h1>Slimey</h1>
 
         <div class="project-showcase">
             <div class="main-media">
-                <img src="../images/lightsout/main.gif" alt="Lights Out Gameplay">
+                <img src="../images/slimey/main.gif" alt="Slimey Gameplay">
             </div>
             <div class="project-gallery">
-                <img src="../images/lightsout/creepy1.gif" alt="Event Example" onclick="showImage(this.src)">
-                <img src="../images/lightsout/lightswitch.gif" alt="Switch Toggle" onclick="showImage(this.src)">
-                <img src="../images/lightsout/flicker.gif" alt="Flickering" onclick="showImage(this.src)">
+                <img src="../images/slimey/swing.gif" alt="Swinging" onclick="showImage(this.src)">
+                <img src="../images/slimey/boost.gif" alt="Boosting" onclick="showImage(this.src)">
+                <img src="../images/slimey/smash.gif" alt="Wall Smash" onclick="showImage(this.src)">
             </div>
         </div>
 
@@ -45,39 +45,39 @@
             <div class="meta-item">
                 <h3>Technologies</h3>
                 <ul>
-                    <li>Unity Engine (3D)</li>
-                    <li>C#</li>
+                    <li>Unity Engine</li>
+                    <li>C# Programming</li>
                 </ul>
             </div>
             <div class="meta-item">
                 <h3>Timeline</h3>
-                <p>April 2025 (3 Days)</p>
+                <p>June 2025 17th - June 21st</p>
             </div>
             <div class="meta-item">
                 <h3>Role</h3>
                 <p>Solo Developer</p>
             </div>
         </div>
+
         <div class="project-content visually-focused-content">
             <div class="content-column">
                 <div class="content-block">
                     <h2>About the Project</h2>
                     <p>
-                        Lights Out is a short psychological horror prototype where your only goal is to survive by
-                        keeping the lights on. The longer you last, the more the room changes... and the more it wants
-                        you. It’s designed as a quick, tension-focused loop, built in 3 days as part of my ongoing
-                        horror experiments.
+                        A 2D grapple-platformer tech demo where momentum is everything. You build up spin while
+                        swinging,
+                        release at top speed, and blast through breakable walls. It’s all physics-driven and designed
+                        around feel. I designed the pixel art and animations(except for the background) myself!
                     </p>
                 </div>
 
                 <div class="content-block">
                     <h2>Technical Highlights</h2>
                     <ul>
-                        <li>Randomized light switch and event system for replayability.</li>
-                        <li>Timer-based blackout trigger with escalating consequences.</li>
-                        <li>Lighting control system to manipulate player tension and visibility.</li>
-                        <li>Audio layering and flicker effects tied to the event system.</li>
-                        <li>Fail states based on exposure to darkness and idle time.</li>
+                        <li>Grapple system using DistanceJoint2D with dynamic rope length control.</li>
+                        <li>Spin-speed tracking with a boost mechanic triggered on release.</li>
+                        <li>Breakable walls triggered on impact with explosion and camera shake effects.</li>
+                        <li>Responsive SFX and VFX tied to gameplay states (e.g., boost-ready, max spin).</li>
                     </ul>
                 </div>
             </div>
@@ -86,29 +86,30 @@
                 <div class="content-block">
                     <h2>Development Focus</h2>
                     <ul>
-                        <li>Creating horror without enemies — relying purely on lighting and suspense.</li>
-                        <li>Designing a modular event system with easy expansion.</li>
-                        <li>Keeping scope narrow while reinforcing replayability through randomness.</li>
-                        <li>Experimenting with pacing and moment-to-moment anxiety.</li>
+                        <li>Experimenting with momentum-based movement using Unity’s physics system.</li>
+                        <li>Refining grapple controls for satisfying swing and release timing.</li>
+                        <li>Building modular boost and wall-destruction systems.</li>
+                        <li>Adding strong feedback through audio, VFX, and screen shake.</li>
                     </ul>
                 </div>
 
                 <div class="content-block">
                     <h2>What I Learned</h2>
                     <ul>
-                        <li>How to build and manage random events in Unity.</li>
-                        <li>Minimalistic horror design focused on player perception.</li>
-                        <li>Keeping scope tight to ensure completion without burnout.</li>
-                        <li>Balancing tension through light mechanics and pacing.</li>
+                        <li>How to blend player input with physics-based motion for fluid gameplay.</li>
+                        <li>Using DistanceJoint2D effectively for responsive grappling.</li>
+                        <li>Synchronizing gameplay states with feedback systems (audio/visual).</li>
+                        <li>Modularizing gameplay logic to keep systems reusable and clean.</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-
         <div class="project-links">
-            <a href="https://jibbyie.itch.io/lights-out" class="btn-play" target="_blank"
-                rel="noopener noreferrer">Download Demo</a>
+            <a href="https://github.com/Jibbyie/game-a-week/tree/origin/Wk2_GrappleSwinger" class="btn-code"
+                target="_blank" rel="noopener noreferrer">View Source Code</a>
+            <a href="https://jibbyie.itch.io/slimey" class="btn-details" target="_blank" rel="noopener noreferrer">Play
+                Demo</a>
             <a href="../index.html#projects" class="btn-back">Back to Projects</a>
         </div>
     </main>
