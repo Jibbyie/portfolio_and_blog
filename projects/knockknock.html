@@ -34,16 +34,25 @@
 
         <div class="project-showcase">
             <div class="main-media">
-                <!-- Main Showcase GIF for this project -->
-                <img src="../images/knockknock/peeking.gif" alt="Knock Knock Gameplay Snippet">
+                <img id="main-gif" src="../images/knockknock/peeking.gif" alt="Peeking through door"
+                    data-caption="Peeking through the door">
+                <p id="main-caption" class="gif-caption">Peeking through the door (Main View)</p>
             </div>
+
             <div class="project-gallery">
-                <!-- Gallery GIFs: Replace with actual relevant GIFs -->
-                <img src="../images/knockknock/lookingaround.gif" alt="Environment" onclick="showImage(this.src)">
-                <img src="../images/knockknock/opendoor.gif" alt="Opening door" onclick="showImage(this.src)">
-                <img src="../images/knockknock/peeking.gif" alt="Peeking through door" onclick="showImage(this.src)">
+                <div class="gif-container">
+                    <img class="gif-thumb" src="../images/knockknock/lookingaround.gif" alt="Looking Around"
+                        data-caption="Looking around the room">
+                    <p class="gif-caption">Looking around the room</p>
+                </div>
+                <div class="gif-container">
+                    <img class="gif-thumb" src="../images/knockknock/opendoor.gif" alt="Opening Door"
+                        data-caption="Opening the door">
+                    <p class="gif-caption">Opening the door</p>
+                </div>
             </div>
         </div>
+
 
         <div class="project-meta">
             <div class="meta-item">
@@ -170,19 +179,55 @@
         </div>
     </footer>
     <script src="https://kit.fontawesome.com/c484d70e2a.js" crossorigin="anonymous"></script>
-
-    <!-- Script for gallery image switching -->
     <script>
-        function showImage(src) {
-            /* This function targets the image inside .main-media specifically */
-            const mainMediaImage = document.querySelector('.main-media img');
-            if (mainMediaImage) {
-                mainMediaImage.src = src;
-            } else {
-                console.error("Could not find element '.main-media img' to update src.");
-            }
-        }
+        document.addEventListener("DOMContentLoaded", () => {
+            const mainGif = document.getElementById("main-gif");
+            const mainCaption = document.getElementById("main-caption");
+            const thumbs = document.querySelectorAll(".gif-thumb");
+
+            thumbs.forEach((thumb) => {
+                thumb.addEventListener("click", () => {
+                    // Store current main gif data
+                    const tempSrc = mainGif.src;
+                    const tempAlt = mainGif.alt;
+                    const tempCaption = mainGif.getAttribute("data-caption");
+
+                    // Swap main gif with thumbnail gif
+                    mainGif.src = thumb.src;
+                    mainGif.alt = thumb.alt;
+                    mainGif.setAttribute("data-caption", thumb.getAttribute("data-caption"));
+                    mainCaption.textContent = thumb.getAttribute("data-caption") + " (Main View)";
+
+                    // Swap thumbnail with previous main gif
+                    thumb.src = tempSrc;
+                    thumb.alt = tempAlt;
+                    thumb.setAttribute("data-caption", tempCaption);
+
+                    // Also update the text below the thumbnail
+                    const captionElement = thumb.nextElementSibling;
+                    if (captionElement && captionElement.classList.contains("gif-caption")) {
+                        captionElement.textContent = tempCaption;
+                    }
+                });
+            });
+
+            // Fullscreen on main gif click
+            mainGif.style.cursor = "pointer";
+            mainGif.addEventListener("click", () => {
+                if (mainGif.requestFullscreen) {
+                    mainGif.requestFullscreen();
+                } else if (mainGif.webkitRequestFullscreen) {
+                    mainGif.webkitRequestFullscreen();
+                } else if (mainGif.msRequestFullscreen) {
+                    mainGif.msRequestFullscreen();
+                }
+            });
+        });
     </script>
+
+
+
+
 </body>
 
 </html>

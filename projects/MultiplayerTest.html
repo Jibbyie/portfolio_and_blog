@@ -28,16 +28,25 @@
     </header>
 
     <main class="container project-detail">
-        <h1>Multiplayer Prototype</h1>
-
+        <h1>Multiplayer Prototype (Work In Progress)</h1>
+        <!-- Multiplayer Prototype Gallery -->
         <div class="project-showcase">
             <div class="main-media">
-                <img src="../images/multiplayer/main.gif" alt="Multiplayer Test Gameplay">
+                <img id="main-gif" src="../images/multiplayer/lobbysetup.gif" alt="Lobby & Game Setup"
+                    data-caption="Lobby setup and player spawning">
+                <p id="main-caption" class="gif-caption">Lobby setup and player spawning (Main View)</p>
             </div>
             <div class="project-gallery">
-                <img src="../images/multiplayer/join.gif" alt="Lobby" onclick="showImage(this.src)">
-                <img src="../images/multiplayer/combat.gif" alt="Combat" onclick="showImage(this.src)">
-                <img src="../images/multiplayer/rematch.gif" alt="Rematch System" onclick="showImage(this.src)">
+                <div class="gif-container">
+                    <img class="gif-thumb" src="../images/multiplayer/hostwin.gif" alt="Host Wins Rematch"
+                        data-caption="Host wins and rematch system activates">
+                    <p class="gif-caption">Host wins and rematch system activates</p>
+                </div>
+                <div class="gif-container">
+                    <img class="gif-thumb" src="../images/multiplayer/player2_clientwin.gif" alt="Player 2 Wins"
+                        data-caption="Player 2 wins, host triggers rematch flow">
+                    <p class="gif-caption">Player 2 wins, host triggers rematch flow</p>
+                </div>
             </div>
         </div>
 
@@ -51,7 +60,7 @@
             </div>
             <div class="meta-item">
                 <h3>Timeline</h3>
-                <p>June 19th 2025 - June 21st 2025</p>
+                <p>June 19th 2025 - Present</p>
             </div>
             <div class="meta-item">
                 <h3>Role</h3>
@@ -64,20 +73,23 @@
                 <div class="content-block">
                     <h2>About the Project</h2>
                     <p>
-                        This was my first real multiplayer project in Unity using NGO. It’s a 2D dash-and-damage
-                        prototype where up to 4 players can join, fight, and rematch in a networked arena.
-                        I built the full networking stack, player syncing, damage system, and win tracking from scratch.
+                        This project is a personal learning space where I'm actively exploring Unity's Netcode for
+                        GameObjects.
+                        It's a basic multiplayer testbed focused on understanding networking architecture, player
+                        syncing,
+                        authoritative logic, and match flow. Everything here is a work in progress, evolving as I get
+                        more comfortable with the tools.
                     </p>
                 </div>
 
                 <div class="content-block">
                     <h2>Technical Highlights</h2>
                     <ul>
-                        <li>Spawn system that dynamically assigns prefabs and syncs ownership.</li>
-                        <li>Health syncing with NetworkVariables and RPC-based damage reporting.</li>
-                        <li>Dash collision logic with server-side validation to ensure fairness.</li>
-                        <li>Match win detection, synced game over UI, and rematch reset system.</li>
-                        <li>Client-specific UI updates including player names, HP bars, and match status.</li>
+                        <li>Initial setup of spawn logic, prefab management, and ownership assignment.</li>
+                        <li>Basic health syncing and damage reporting via NetworkVariables and RPCs.</li>
+                        <li>Functional dash system with server-side validation to maintain fairness.</li>
+                        <li>Early version of rematch logic and networked game state transitions.</li>
+                        <li>Client-specific UI testing: health bars, name display, and victory screen toggling.</li>
                     </ul>
                 </div>
             </div>
@@ -86,39 +98,36 @@
                 <div class="content-block">
                     <h2>Development Focus</h2>
                     <ul>
-                        <li>Understanding authoritative server logic and network ownership.</li>
-                        <li>Building a fully network-safe player loop from join to rematch.</li>
-                        <li>Managing client sync, disconnections, and UI states reliably.</li>
-                        <li>Learning the limits of RPCs, NetworkVariables, and scene objects.</li>
+                        <li>Learning and applying core concepts of multiplayer programming in Unity.</li>
+                        <li>Practicing network-safe architecture, separation of responsibilities, and modularity.</li>
+                        <li>Experimenting with client-server logic, latency handling, and prediction.</li>
+                        <li>Iteratively breaking, fixing, and improving networking logic through trial and error.</li>
                     </ul>
                 </div>
 
                 <div class="content-block">
-                    <h2>What I Learned</h2>
+                    <h2>What I’ve Learned So Far</h2>
                     <ul>
-                        <li>How to structure a clean, server-authoritative multiplayer loop in Unity.</li>
-                        <li>Dealing with sync issues and ownership logic bugs in NGO.</li>
-                        <li>Using RPCs properly alongside NetworkVariables.</li>
-                        <li>The importance of separating concerns to avoid spaghetti code.</li>
-                        <li>Why modular design matters in multiplayer systems.</li>
+                        <li>RPCs vs. NetworkVariables: when to use each and common pitfalls.</li>
+                        <li>How to avoid spaghetti code in networked player controllers.</li>
+                        <li>The importance of server authority and trust boundaries.</li>
+                        <li>Why UI and logic should be decoupled in multiplayer games.</li>
                     </ul>
                 </div>
 
                 <div class="content-block">
-                    <h2>What I’d Improve On</h2>
+                    <h2>Next Steps</h2>
                     <p>
-                        Honestly, the code is kind of slapped together. A lot of systems are overly coupled —
-                        for example, <code>PlayerMove.cs</code> handles movement, dash logic, damage processing,
-                        health syncing, collision events, and UI updates… basically everything. It works, but it's
-                        messy.
-                        I’d refactor it to break up responsibilities properly and make things modular.
-                        Right now, a bunch of scripts are too tightly connected, which makes scaling or reusing
-                        them difficult. I want to revisit this from scratch and rebuild it more cleanly in the future.
+                        I plan to gradually refactor systems to be more modular and readable (right now stuff is
+                        horribly coupled and thrown together).
+                        I’m also looking to add proper lobby flow, a clean rematch transition, and smoother player
+                        handling.
+                        Eventually, I’ll rebuild this into a proper competitive mini-game once I’ve ironed out the core
+                        networking logic.
                     </p>
                 </div>
             </div>
         </div>
-
 
         <div class="project-links">
             <a href="https://github.com/Jibbyie/game-a-week/tree/origin/Multiplayer_NGO_Race" class="btn-code"
@@ -146,12 +155,47 @@
         </div>
     </footer>
 
-    <script src="https://kit.fontawesome.com/c484d70e2a.js" crossorigin="anonymous"></script>
     <script>
-        function showImage(src) {
-            document.querySelector('.main-media img').src = src;
-        }
+        document.addEventListener("DOMContentLoaded", () => {
+            const mainGif = document.getElementById("main-gif");
+            const mainCaption = document.getElementById("main-caption");
+            const thumbs = document.querySelectorAll(".gif-thumb");
+
+            thumbs.forEach((thumb) => {
+                thumb.addEventListener("click", () => {
+                    const tempSrc = mainGif.src;
+                    const tempAlt = mainGif.alt;
+                    const tempCaption = mainGif.getAttribute("data-caption");
+
+                    mainGif.src = thumb.src;
+                    mainGif.alt = thumb.alt;
+                    mainGif.setAttribute("data-caption", thumb.getAttribute("data-caption"));
+                    mainCaption.textContent = thumb.getAttribute("data-caption") + " (Main View)";
+
+                    thumb.src = tempSrc;
+                    thumb.alt = tempAlt;
+                    thumb.setAttribute("data-caption", tempCaption);
+
+                    const captionElement = thumb.nextElementSibling;
+                    if (captionElement && captionElement.classList.contains("gif-caption")) {
+                        captionElement.textContent = tempCaption;
+                    }
+                });
+            });
+
+            mainGif.style.cursor = "pointer";
+            mainGif.addEventListener("click", () => {
+                if (mainGif.requestFullscreen) {
+                    mainGif.requestFullscreen();
+                } else if (mainGif.webkitRequestFullscreen) {
+                    mainGif.webkitRequestFullscreen();
+                } else if (mainGif.msRequestFullscreen) {
+                    mainGif.msRequestFullscreen();
+                }
+            });
+        });
     </script>
+
 </body>
 
 </html>

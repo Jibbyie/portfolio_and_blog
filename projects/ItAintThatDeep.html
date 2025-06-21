@@ -27,18 +27,106 @@
     </header>
 
     <main class="container project-detail">
-        <h1>It Ain’t That Deep</h1>
+        <h1>It Ain’t That Deep (Work In Progress)</h1>
 
         <div class="project-showcase">
+
             <div class="main-media">
-                <img src="../images/dolphin/main.gif" alt="It Ain’t That Deep Gameplay" />
+                <img id="main-gif" src="../images/dolphin/titlescreen.jpg" alt="Title Screen"
+                    data-caption="Game title screen with ambient animation">
+                <p id="main-caption" class="gif-caption">Game title screen with ambient animation (Main View)</p>
             </div>
+
             <div class="project-gallery">
-                <img src="../images/dolphin/ui1.gif" alt="UI Interaction" onclick="showImage(this.src)" />
-                <img src="../images/dolphin/swimming.gif" alt="Swimming Mechanics" onclick="showImage(this.src)" />
-                <img src="../images/dolphin/pings.gif" alt="Sonar Pings" onclick="showImage(this.src)" />
+                <div class="gif-container">
+                    <a href="../images/dolphin/main_menu.jpg" target="_blank">
+                        <img class="gif-thumb" src="../images/dolphin/main_menu.jpg" alt="Main Menu Screenshot"
+                            data-caption="Main menu of the game">
+                    </a>
+                    <p class="gif-caption">Main menu of the game</p>
+                </div>
+                <div class="gif-container">
+                    <a href="../images/dolphin/loading_screen.jpg" target="_blank">
+                        <img class="gif-thumb" src="../images/dolphin/loading_screen.jpg" alt="Loading Screen"
+                            data-caption="Loading screen with dynamic tips">
+                    </a>
+                    <p class="gif-caption">Loading screen with dynamic tips</p>
+                </div>
+
+                <div class="gif-container">
+                    <a href="../images/dolphin/example_uioverlay.jpg" target="_blank">
+                        <img class="gif-thumb" src="../images/dolphin/example_uioverlay.jpg" alt="UI Overlay"
+                            data-caption="UI overlay during gameplay">
+                    </a>
+                    <p class="gif-caption">UI overlay during gameplay</p>
+                </div>
+
+                <div class="gif-container">
+                    <a href="../images/dolphin/pause_menu.jpg" target="_blank">
+                        <img class="gif-thumb" src="../images/dolphin/pause_menu.jpg" alt="Pause Menu"
+                            data-caption="Pause menu design with accessibility toggles">
+                    </a>
+                    <p class="gif-caption">Pause menu design</p>
+                </div>
+
+                <div class="gif-container">
+                    <a href="../images/dolphin/npc_interaction.jpg" target="_blank">
+                        <img class="gif-thumb" src="../images/dolphin/npc_interaction.jpg" alt="NPC Interaction"
+                            data-caption="Player interacting with an NPC">
+                    </a>
+                    <p class="gif-caption">Player interacting with an NPC</p>
+                </div>
+
+                <div class="gif-container">
+                    <a href="../images/dolphin/player_talking.jpg" target="_blank">
+                        <img class="gif-thumb" src="../images/dolphin/player_talking.jpg" alt="Dialogue Example"
+                            data-caption="Dialogue UI during player conversation">
+                    </a>
+                    <p class="gif-caption">Dialogue UI during player conversation</p>
+                </div>
+
+                <div class="gif-container">
+                    <a href="../images/dolphin/character_icons.jpg" target="_blank">
+                        <img class="gif-thumb" src="../images/dolphin/character_icons.jpg" alt="Character Icons"
+                            data-caption="Designed icons for main characters">
+                    </a>
+                    <p class="gif-caption">Designed icons for main characters</p>
+                </div>
+
+                <div class="gif-container">
+                    <a href="../images/dolphin/cutscene_screencap.jpg" target="_blank">
+                        <img class="gif-thumb" src="../images/dolphin/cutscene_screencap.jpg" alt="Cutscene Screenshot"
+                            data-caption="Still from an in-game cutscene">
+                    </a>
+                    <p class="gif-caption">Still from an in-game cutscene</p>
+                </div>
+
+                <div class="gif-container">
+                    <a href="../images/dolphin/example_storyboard.jpg" target="_blank">
+                        <img class="gif-thumb" src="../images/dolphin/example_storyboard.jpg" alt="Storyboard Example"
+                            data-caption="Storyboard from early narrative planning">
+                    </a>
+                    <p class="gif-caption">Storyboard from early narrative planning</p>
+                </div>
+
+                <div class="gif-container">
+                    <a href="../images/dolphin/paper_prototype.jpg" target="_blank">
+                        <img class="gif-thumb" src="../images/dolphin/paper_prototype.jpg" alt="Paper Prototype Sketch"
+                            data-caption="Initial sketch of interaction layout">
+                    </a>
+                    <p class="gif-caption">Initial sketch of interaction layout</p>
+                </div>
+
+                <div class="gif-container">
+                    <a href="../images/dolphin/paper_prototype_2.jpg" target="_blank">
+                        <img class="gif-thumb" src="../images/dolphin/paper_prototype_2.jpg" alt="Prototype Refinement"
+                            data-caption="Refined version of paper prototype">
+                    </a>
+                    <p class="gif-caption">Refined version of paper prototype</p>
+                </div>
             </div>
         </div>
+
 
         <div class="project-meta">
             <div class="meta-item">
@@ -66,28 +154,23 @@
             <div class="content-column">
                 <div class="content-block">
                     <h2>About the Project</h2>
-                    <p>
-                        <strong>It Ain’t That Deep</strong> is a stylized 3D underwater exploration game created as part
-                        of our MSc thesis in Creative Digital Media & UX. Co-developed with <strong>Jake Avra
-                            (Designer)</strong>,
-                        it combines narrative, systems design, and accessible interface theory to guide players through
-                        an atmospheric marine world.
-                    </p>
-                    <p>
-                        The game revolves around environmental storytelling and the subtle communication of player
-                        objectives through carefully layered feedback, blending dialouge based interaction, quests,
-                        immersive UI,
-                        and iterative UX research.
+                    <p><strong>It Ain’t That Deep</strong> is an absurdist sandbox game where you play as a dolphin
+                        causing underwater chaos. Inspired by titles like Goat Simulator, Shark Tale, and Untitled Goose
+                        Game, it's built to encourage freedom, emergent interactions, and unpredictable outcomes.</p>
+                    <p>This is a research-driven thesis project developed as part of my MSc in Creative Digital Media &
+                        UX alongside Jake Avra. It blends design systems, dialogue mechanics, and UX theory to build a
+                        world that invites experimentation through humour and player expression. Everything here is
+                        still being prototyped, iterated, and stress-tested as we build towards a full vertical slice.
                     </p>
                 </div>
 
                 <div class="content-block">
                     <h2>Technical Highlights</h2>
                     <ul>
-                        <li>Third-person underwater movement with curved momentum controls</li>
-                        <li>Diegetic + HUD UI hybrid design based on player cognition and clarity</li>
-                        <li>Systemic design to reward exploration without explicit markers</li>
-                        <li>Figma prototypes fully mapped to responsive Unity UI systems</li>
+                        <li>Third-person underwater controller with curved acceleration</li>
+                        <li>Pixel Crushers Dialogue System powering branching interactions</li>
+                        <li>Contextual triggers for dynamic, chaos-driven reactions</li>
+                        <li>Figma-to-Unity UI pipeline with layered feedback loops</li>
                     </ul>
                 </div>
             </div>
@@ -96,27 +179,26 @@
                 <div class="content-block">
                     <h2>Development Focus</h2>
                     <ul>
-                        <li>Testing how UX and sensory design can improve clarity and immersion</li>
-                        <li>Prototyping accessibility-minded systems for non-verbal communication</li>
-                        <li>Building responsive controls and interfaces for fluid underwater play</li>
-                        <li>Blending creative narrative beats with player-driven discovery</li>
-                        <li>Balancing environmental storytelling with actionable feedback</li>
+                        <li>Combining academic UX principles with playable systems</li>
+                        <li>Designing player-driven chaos through layered interactions</li>
+                        <li>Blending diegetic and non-diegetic UI based on clarity and feedback</li>
+                        <li>Balancing absurdity with intentional affordances</li>
+                        <li>Testing how underwater movement impacts interaction clarity</li>
                     </ul>
                 </div>
 
                 <div class="content-block">
-                    <h2>What We Learned</h2>
+                    <h2>What We’ve Learned So Far</h2>
                     <ul>
-                        <li>How to apply academic UX frameworks to in-game systems</li>
-                        <li>Building a vertical slice that integrates design, systems, and player testing</li>
-                        <li>Collaborating on a scoped but ambitious project with research goals</li>
-                        <li>Creating interface clarity without tutorials or dialogue</li>
-                        <li>Translating Figma prototypes into Unity-ready, layered UI flows</li>
+                        <li>How to scope and structure a research-based game production pipeline</li>
+                        <li>Challenges of building and syncing multiple dynamic systems (dialogue, physics, qiests)</li>
+                        <li>Player feedback is key to balancing absurd mechanics with functional outcomes</li>
+                        <li>Importance of modularity when building chaotic sandbox logic</li>
+                        <li>Iteration is king, every week, something breaks, and something else makes sense</li>
                     </ul>
                 </div>
             </div>
         </div>
-
 
         <section class="devlog-section">
             <div class="container">
@@ -127,23 +209,19 @@
                     Stay updated on new builds, UI experiments, and behind-the-scenes development decisions.
                 </p>
                 <div class="project-links">
-                    <a href="https://your-devlog-link.com" class="btn-play" target="_blank"
-                        rel="noopener noreferrer">View Devlog</a>
+                    <a href="" class="btn-details">Devlog Coming Soon</a>
                 </div>
             </div>
         </section>
-
 
         <div class="project-links">
             <a href="https://github.com/Jibbyie/Dolphin-Simulator" class="btn-code" target="_blank"
                 rel="noopener noreferrer">View Source Code</a>
             <a href="https://www.figma.com/proto/n9toIfOKndeHJRaK6vc75C/Game-UI-Design?node-id=21-2&starting-point-node-id=21%3A2&t=DBwpjyBcXCoLqq1A-1"
                 class="btn-play" target="_blank" rel="noopener noreferrer">View UI Prototype</a>
-            <a href="https://jibbyie.itch.io/dolphin-simulator" class="btn-play" target="_blank"
-                rel="noopener noreferrer">Download Demo</a>
+            <a href="" class="btn-details">Demo Coming Soon</a>
             <a href="../index.html#highlighted" class="btn-back">Back to Portfolio</a>
         </div>
-
     </main>
 
     <section id="contact">
@@ -164,13 +242,62 @@
             <p>© 2025 Jibby's Corner</p>
         </div>
     </footer>
-
-    <script src="https://kit.fontawesome.com/c484d70e2a.js" crossorigin="anonymous"></script>
     <script>
-        function showImage(src) {
-            document.querySelector(".main-media img").src = src;
-        }
+        document.addEventListener("DOMContentLoaded", () => {
+            const mainGif = document.getElementById("main-gif");
+            const mainCaption = document.getElementById("main-caption");
+            const thumbs = document.querySelectorAll(".gif-thumb");
+
+            thumbs.forEach((thumb) => {
+                const src = thumb.src.toLowerCase();
+
+                if (src.endsWith(".gif")) {
+                    // Click behavior for gifs: swap into main view
+                    thumb.addEventListener("click", () => {
+                        const tempSrc = mainGif.src;
+                        const tempAlt = mainGif.alt;
+                        const tempCaption = mainGif.getAttribute("data-caption");
+
+                        mainGif.src = thumb.src;
+                        mainGif.alt = thumb.alt;
+                        mainGif.setAttribute("data-caption", thumb.getAttribute("data-caption"));
+                        mainCaption.textContent = thumb.getAttribute("data-caption") + " (Main View)";
+
+                        thumb.src = tempSrc;
+                        thumb.alt = tempAlt;
+                        thumb.setAttribute("data-caption", tempCaption);
+
+                        const captionElement = thumb.nextElementSibling;
+                        if (captionElement && captionElement.classList.contains("gif-caption")) {
+                            captionElement.textContent = tempCaption;
+                        }
+                    });
+                }
+            });
+
+            // Main media click behavior
+            mainGif.style.cursor = "pointer";
+            mainGif.addEventListener("click", () => {
+                const src = mainGif.src.toLowerCase();
+
+                if (src.endsWith(".gif")) {
+                    // Fullscreen for gifs
+                    if (mainGif.requestFullscreen) {
+                        mainGif.requestFullscreen();
+                    } else if (mainGif.webkitRequestFullscreen) {
+                        mainGif.webkitRequestFullscreen();
+                    } else if (mainGif.msRequestFullscreen) {
+                        mainGif.msRequestFullscreen();
+                    }
+                } else {
+                    // Open non-gif image in new tab
+                    window.open(mainGif.src, "_blank");
+                }
+            });
+        });
     </script>
+
+
 </body>
 
 </html>
