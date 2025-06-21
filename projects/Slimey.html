@@ -32,12 +32,21 @@
 
         <div class="project-showcase">
             <div class="main-media">
-                <img src="../images/slimey/main.gif" alt="Slimey Gameplay">
+                <img id="main-gif" src="../images/slimey/main.gif" alt="Slimey Gameplay"
+                    data-caption="Core movement">
+                <p id="main-caption" class="gif-caption">Core movement (Main View)</p>
             </div>
             <div class="project-gallery">
-                <img src="../images/slimey/swing.gif" alt="Swinging" onclick="showImage(this.src)">
-                <img src="../images/slimey/boost.gif" alt="Boosting" onclick="showImage(this.src)">
-                <img src="../images/slimey/smash.gif" alt="Wall Smash" onclick="showImage(this.src)">
+                <div class="gif-container">
+                    <img class="gif-thumb" src="../images/slimey/swinging.gif" alt="Swinging on grapple"
+                        data-caption="Swinging using the grapple mechanic">
+                    <p class="gif-caption">Swinging using the grapple mechanic</p>
+                </div>
+                <div class="gif-container">
+                    <img class="gif-thumb" src="../images/slimey/explosions.gif" alt="Wall smashing effect"
+                        data-caption="Smashing through destructible walls">
+                    <p class="gif-caption">Smashing through destructible walls</p>
+                </div>
             </div>
         </div>
 
@@ -133,12 +142,50 @@
         </div>
     </footer>
 
-    <script src="https://kit.fontawesome.com/c484d70e2a.js" crossorigin="anonymous"></script>
     <script>
-        function showImage(src) {
-            document.querySelector('.main-media img').src = src;
-        }
+        document.addEventListener("DOMContentLoaded", () => {
+            const mainGif = document.getElementById("main-gif");
+            const mainCaption = document.getElementById("main-caption");
+            const thumbs = document.querySelectorAll(".gif-thumb");
+
+            thumbs.forEach((thumb) => {
+                thumb.addEventListener("click", () => {
+                    const tempSrc = mainGif.src;
+                    const tempAlt = mainGif.alt;
+                    const tempCaption = mainGif.getAttribute("data-caption");
+
+                    mainGif.src = thumb.src;
+                    mainGif.alt = thumb.alt;
+                    mainGif.setAttribute("data-caption", thumb.getAttribute("data-caption"));
+                    mainCaption.textContent = thumb.getAttribute("data-caption") + " (Main View)";
+
+                    thumb.src = tempSrc;
+                    thumb.alt = tempAlt;
+                    thumb.setAttribute("data-caption", tempCaption);
+
+                    const captionElement = thumb.nextElementSibling;
+                    if (captionElement && captionElement.classList.contains("gif-caption")) {
+                        captionElement.textContent = tempCaption;
+                    }
+                });
+            });
+
+            mainGif.style.cursor = "pointer";
+            mainGif.addEventListener("click", () => {
+                if (mainGif.requestFullscreen) {
+                    mainGif.requestFullscreen();
+                } else if (mainGif.webkitRequestFullscreen) {
+                    mainGif.webkitRequestFullscreen();
+                } else if (mainGif.msRequestFullscreen) {
+                    mainGif.msRequestFullscreen();
+                }
+            });
+        });
     </script>
+
+
+
+
 </body>
 
 </html>
