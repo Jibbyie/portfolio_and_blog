@@ -28,8 +28,8 @@
 
     <section id="intro" class="hero">
         <div class="container">
-            <h2>Hi! Welcome to my Portfolio!</h2>
-            <p>I'm documenting my progress, sharing my projects, and learning in public.</p>
+            <h2>Hey! I’m Jibril. I build games that feel good to play.</h2>
+            <p>Gameplay Programmer · Indie Developer · Focused on Mastering Unity</p>
         </div>
     </section>
 
@@ -38,82 +38,40 @@
         <div class="container about-container">
             <div class="about-image">
                 <img src="images/profile.jpg" alt="Jibril Abdulazeez Profile Picture">
-                <!-- Make sure profile.jpg exists -->
             </div>
             <div class="about-text">
                 <h2>About Me</h2>
                 <p>
-                    Hi! I'm Jibril Abdulazeez, a 23-year-old aspiring game developer based in Dublin, Ireland. I'm
-                    passionate about crafting engaging interactive experiences and bringing digital worlds to life.
+                    I’m a gameplay programmer and indie developer based in Dublin, Ireland. I specialize in building
+                    mechanics that are responsive, rewarding, and most importantly, fun!
                 </p>
                 <p>
-                    My journey combines a strong technical foundation from my BSc in Computer Science (TU Dublin,
-                    Tallaght) with a creative and user-centered approach gained through my current MSc in Creative
-                    Digital Media & UX (TU Dublin, Grangegorman). This unique blend allows me to tackle both the
-                    programming challenges and the design intricacies involved in game development.
+                    My background is in Computer Science (TU Dublin) and I’m completing a Master’s in Creative Digital
+                    Media & UX. That means I blend technical skills with a strong sense of player experience.
                 </p>
                 <p>
-                    I'm particularly fascinated by implementing novel gameplay mechanics. I enjoy the entire process,
-                    from initial
-                    concept to polished product.
+                    Right now, I'm focused on prototyping game systems in Unity, learning from every project, and
+                    steadily leveling up. Most of what you see here was built solo, from code to visuals to design.
                 </p>
                 <p>
-                    This website serves as my portfolio and a chronicle of my game development journey as I learn,
-                    build, and work towards my goal of contributing my skills to the exciting game industry.
+                    Whether I end up joining a studio or launching something on my own, the goal stays the same: make
+                    games that people remember.
+                </p>
+                <p>
+                    Feel free to reach out — I’m always open to feedback, collaboration, or just talking game dev.
                 </p>
             </div>
         </div>
     </section>
-    <!-- End of About section -->
 
-    <!-- START: Skills Section -->
-    <section id="skills"> <!-- Removed inline style, added to CSS -->
-        <div class="container">
-            <h2>My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming & Tech</h3>
-                    <ul>
-                        <li>C# (Unity)</li>
-                        <li>C++ (Basic)</li>
-                        <li>Python (Basic)</li>
-                        <li>JavaScript (Web/Interactive)</li>
-                        <li>HTML / CSS</li>
-                        <li>Version Control (Git/GitHub)</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Game Engines & Tools</h3>
-                    <ul>
-                        <li>Unity Engine (Intermediate)</li>
-                        <li>Unreal Engine (Basic)</li>
-                        <li>Aseprite (Pixel Art)</li>
-                        <li>Figma</li>
-                        <li>Adobe Suite</li>
-                        <li>FMOD (Audio Implementation)</li>
-                        <!-- Add tools like Trello/Jira if applicable -->
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Design & UX</h3>
-                    <ul>
-                        <li>Game Design Principles</li>
-                        <li>Narrative Design</li>
-                        <li>User Experience (UX) Research</li>
-                        <li>Wireframing / Prototyping</li>
-                        <li>User Interface (UI) Design</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END: Skills Section -->
+    <!-- End of About section -->
 
 
     <!-- START: Projects section -->
     <section id="projects">
         <div class="container">
-            <h2>Projects</h2>
+            <h2 style="color: white;">My Projects</h2>
+
             <!-- Added project-cards div for grid layout -->
 
             <!-- Knock Knock -->
@@ -125,55 +83,112 @@
                     <div class="project-info">
                         <h3>Knock Knock</h3>
                         <div class="project-tech">
-                            <span>Unity</span>
+                            <span>Unity3D</span>
                             <span>C#</span>
+                            <span>Single Player</span>
                         </div>
-                        <p>"Knock Knock" is a first-person psychological horror game proof of concept where you're alone
-                            in your
-                            apartment with mysterious visitors knocking at your door. Players must decide whether to
-                            open the door to safe characters or ignore dangerous "mimics" by using the peephole and
-                            analysing voice lines. The game creates tension through uncertainty and consequences for
-                            each decision.
-                            I got my friends to record some unique lines!</p>
+                        <p>"Knock Knock" is a short psychological horror prototype where you're stuck in your apartment
+                            with strangers knocking at your door. Some are safe, some aren’t. You use a peephole and
+                            voice lines to figure out who’s who. I even got my friends to help voice it!</p>
                         <ul class="project-highlights">
-                            <li>Dynamic character management with randomised selection.</li>
-                            <li>Adaptive anxiety system with audio-based emotional state.</li>
-                            <li>Immersive door interaction with proximity-triggered mechanics.
-                            </li>
+                            <li>Randomised characters (safe vs. mimic)</li>
+                            <li>Audio-based anxiety distortion system</li>
+                            <li>Peephole interaction + proximity-based decisions</li>
                         </ul>
                         <div class="project-links">
-                            <a href="https://jibbyie.itch.io/knock-knock-poc" class="btn-play">Play Demo</a>
-                            <a href="https://github.com/Jibbyie/Knock_Knock" class="btn-code">View Code</a>
-                            <a href="projects/knockknock.html" class="btn-details">Project Details</a>
+                            <a href="projects/knockknock.html" class="btn-play">Project Details</a>
+                            <a href="https://jibbyie.itch.io/knock-knock-poc" class="btn-details" target="_blank"
+                                rel="noopener noreferrer">Download Demo</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Lights Out -->
+                <!-- 2D Grapple Mechanic -->
                 <div class="project">
                     <div class="project-media">
-                        <img src="images/gif2.gif" alt="Lights Out" class="project-gif">
+                        <img src="images/slimey/main.gif" alt="Slimey Grapple Demo" class="project-gif">
+                    </div>
+                    <div class="project-info">
+                        <h3>Slimey</h3>
+                        <div class="project-tech">
+                            <span>Unity2D</span>
+                            <span>C#</span>
+                            <span>Aseprite</span>
+                            <span>Single Player</span>
+                        </div>
+                        <p>A physics-based 2D grapple demo where you swing around, build up spin, and boost through
+                            walls. It’s all about momentum and feel.</p>
+                        <ul class="project-highlights">
+                            <li>Rope-based grapple system with dynamic length</li>
+                            <li>Spin-charged dash mechanic for smashing breakables</li>
+                            <li>Camera shake, trails, and audio for feedback</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="projects/Slimey.html" class="btn-play">Project Details</a>
+                            <a href="https://github.com/Jibbyie/game-a-week/tree/origin/Wk2_GrappleSwinger"
+                                class="btn-code" target="_blank" rel="noopener noreferrer">View Source Code</a>
+                            <a href="https://jibbyie.itch.io/slimey" class="btn-details" target="_blank"
+                                rel="noopener noreferrer">Play Demo</a>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <!-- Multiplayer Proof Of Concept -->
+                <div class="project">
+                    <div class="project-media">
+                        <img src="images/multiplayer/main.gif" alt="Multiplayer 2D Test" class="project-gif">
+                    </div>
+                    <div class="project-info">
+                        <h3>Multiplayer 2D Test</h3>
+                        <div class="project-tech">
+                            <span>Unity2D</span>
+                            <span>C#</span>
+                            <span>Netcode for GameObjects</span>
+                        </div>
+                        <p>My first multiplayer prototype using Unity NGO. Up to 4 players dash around, damage each
+                            other, and trigger win conditions with full rematch flow.</p>
+                        <ul class="project-highlights">
+                            <li>Server-authoritative spawn, damage & death system</li>
+                            <li>Health sync using NetworkVariables</li>
+                            <li>Rematch system with dynamic respawn</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="projects/MultiplayerTest.html" class="btn-play">Project Details</a>
+                            <a href="https://github.com/Jibbyie/game-a-week/tree/origin/Multiplayer_NGO_Race"
+                                class="btn-code" target="_blank" rel="noopener noreferrer">View Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lights Out Proof Of Concept -->
+                <div class="project">
+                    <div class="project-media">
+                        <img src="images/lightsout/main.gif" alt="Lights Out" class="project-gif">
                     </div>
                     <div class="project-info">
                         <h3>Lights Out</h3>
                         <div class="project-tech">
-                            <span>Unity</span>
+                            <span>Unity 3D</span>
                             <span>C#</span>
                         </div>
-                        <p>A text-based adventure game with branching narratives, player choices, and multiple endings.
-                        </p>
+                        <p>A short psychological horror prototype built in 3 days. You must keep the lights on to
+                            survive, but the longer you last, the more the room changes…</p>
                         <ul class="project-highlights">
-                            <li>Branching dialogue system</li>
-                            <li>Save/load functionality</li>
-                            <li>Dynamic soundtrack</li>
+                            <li>Randomized light switch and event system</li>
+                            <li>Timer-based blackout and fail state logic</li>
+                            <li>Audio layering and flicker effects for tension</li>
                         </ul>
                         <div class="project-links">
-                            <a href="https://jibbyie.itch.io/lights-out" class="btn-play">Play Demo</a>
-                            <a href="https://github.com/Jibbyie/Lights_Out" class="btn-code">View Code</a>
-                            <a href="projects/lightsout.html" class="btn-details">Project Details</a>
+                            <a href="projects/LightsOut.html" class="btn-play">Project Details</a>
+                            <a href="https://jibbyie.itch.io/lights-out" class="btn-details" target="_blank"
+                                rel="noopener noreferrer">Download Demo</a>
                         </div>
                     </div>
                 </div>
+
 
                 <!-- Add more <div class="project">...</div> elements here for future projects -->
 
@@ -181,6 +196,53 @@
         </div>
     </section>
     <!-- END: Projects section -->
+
+    <!-- START: Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+
+                <div class="skill-category">
+                    <h3>Programming & Tech</h3>
+                    <ul>
+                        <li>C# (Strong Intermediate – Unity-focused)</li>
+                        <li>C++ (Basic)</li>
+                        <li>JavaScript (Web Interactivity)</li>
+                        <li>HTML / CSS (Responsive Layouts, UI Styling)</li>
+                        <li>Git / GitHub (Team & Solo Workflow)</li>
+                        <li>Netcode for GameObjects (NGO)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Game Engines & Tools</h3>
+                    <ul>
+                        <li>Unity Engine (Intermediate – 2D, 3D, Multiplayer)</li>
+                        <li>Unreal Engine (Basic – Blueprint Familiarity)</li>
+                        <li>Pixel Art Tools (Aseprite)</li>
+                        <li>FMOD (Audio Integration)</li>
+                        <li>Figma (High-Fidelity UI Prototypes)</li>
+                        <li>Adobe Suite (Photoshop, Premiere)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Design & UX</h3>
+                    <ul>
+                        <li>Game Design (Systems, Balance, Feedback Loops)</li>
+                        <li>Narrative Design & Dialogue Writing</li>
+                        <li>UX Research (User Testing, Iterative Feedback)</li>
+                        <li>Wireframing / Prototyping (Figma, Paper, Unity UI)</li>
+                        <li>UI Design (Accessibility & Clarity)</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- END: Skills Section -->
+
 
     <!-- START: Contact section with Icons -->
     <section id="contact">

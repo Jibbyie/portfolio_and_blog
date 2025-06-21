@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer Prototype | Unity Netcode Test</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project-details.css">
+    <link rel="icon" href="/jibby.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="../index.html" style="color: white; text-decoration: none;">Home</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                    <li><a href="../Jibril_Abdulazeez_Resume.pdf" target="_blank" class="nav-resume-button">Resume</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container project-detail">
+        <h1>Multiplayer Prototype</h1>
+
+        <div class="project-showcase">
+            <div class="main-media">
+                <img src="../images/multiplayer/main.gif" alt="Multiplayer Test Gameplay">
+            </div>
+            <div class="project-gallery">
+                <img src="../images/multiplayer/join.gif" alt="Lobby" onclick="showImage(this.src)">
+                <img src="../images/multiplayer/combat.gif" alt="Combat" onclick="showImage(this.src)">
+                <img src="../images/multiplayer/rematch.gif" alt="Rematch System" onclick="showImage(this.src)">
+            </div>
+        </div>
+
+        <div class="project-meta">
+            <div class="meta-item">
+                <h3>Technologies</h3>
+                <ul>
+                    <li>Unity Netcode for GameObjects</li>
+                    <li>C#</li>
+                </ul>
+            </div>
+            <div class="meta-item">
+                <h3>Timeline</h3>
+                <p>June 19th 2025 - June 21st 2025</p>
+            </div>
+            <div class="meta-item">
+                <h3>Role</h3>
+                <p>Solo Developer</p>
+            </div>
+        </div>
+
+        <div class="project-content visually-focused-content">
+            <div class="content-column">
+                <div class="content-block">
+                    <h2>About the Project</h2>
+                    <p>
+                        This was my first real multiplayer project in Unity using NGO. It’s a 2D dash-and-damage
+                        prototype where up to 4 players can join, fight, and rematch in a networked arena.
+                        I built the full networking stack, player syncing, damage system, and win tracking from scratch.
+                    </p>
+                </div>
+
+                <div class="content-block">
+                    <h2>Technical Highlights</h2>
+                    <ul>
+                        <li>Spawn system that dynamically assigns prefabs and syncs ownership.</li>
+                        <li>Health syncing with NetworkVariables and RPC-based damage reporting.</li>
+                        <li>Dash collision logic with server-side validation to ensure fairness.</li>
+                        <li>Match win detection, synced game over UI, and rematch reset system.</li>
+                        <li>Client-specific UI updates including player names, HP bars, and match status.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-column">
+                <div class="content-block">
+                    <h2>Development Focus</h2>
+                    <ul>
+                        <li>Understanding authoritative server logic and network ownership.</li>
+                        <li>Building a fully network-safe player loop from join to rematch.</li>
+                        <li>Managing client sync, disconnections, and UI states reliably.</li>
+                        <li>Learning the limits of RPCs, NetworkVariables, and scene objects.</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>What I Learned</h2>
+                    <ul>
+                        <li>How to structure a clean, server-authoritative multiplayer loop in Unity.</li>
+                        <li>Dealing with sync issues and ownership logic bugs in NGO.</li>
+                        <li>Using RPCs properly alongside NetworkVariables.</li>
+                        <li>The importance of separating concerns to avoid spaghetti code.</li>
+                        <li>Why modular design matters in multiplayer systems.</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>What I’d Improve On</h2>
+                    <p>
+                        Honestly, the code is kind of slapped together. A lot of systems are overly coupled —
+                        for example, <code>PlayerMove.cs</code> handles movement, dash logic, damage processing,
+                        health syncing, collision events, and UI updates… basically everything. It works, but it's
+                        messy.
+                        I’d refactor it to break up responsibilities properly and make things modular.
+                        Right now, a bunch of scripts are too tightly connected, which makes scaling or reusing
+                        them difficult. I want to revisit this from scratch and rebuild it more cleanly in the future.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="project-links">
+            <a href="https://github.com/Jibbyie/game-a-week/tree/origin/Multiplayer_NGO_Race" class="btn-code"
+                target="_blank" rel="noopener noreferrer">View Source Code</a>
+            <a href="../index.html#projects" class="btn-back">Back to Projects</a>
+        </div>
+    </main>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Connect With Me</h2>
+            <div class="social-links">
+                <a href="https://github.com/jibbyie" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jibril-abdulazeez/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://instagram.com/jibbyie" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://jibbyie.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Jibby's Corner</p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/c484d70e2a.js" crossorigin="anonymous"></script>
+    <script>
+        function showImage(src) {
+            document.querySelector('.main-media img').src = src;
+        }
+    </script>
+</body>
+
+</html>

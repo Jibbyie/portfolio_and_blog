@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slimey | Grappling Hook Tech Demo</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project-details.css">
+    <link rel="icon" href="/jibby.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="../index.html" style="color: white; text-decoration: none;">Home</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                    <li><a href="../Jibril_Abdulazeez_Resume.pdf" target="_blank" class="nav-resume-button">Resume</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container project-detail">
+        <h1>Slimey</h1>
+
+        <div class="project-showcase">
+            <div class="main-media">
+                <img src="../images/slimey/main.gif" alt="Slimey Gameplay">
+            </div>
+            <div class="project-gallery">
+                <img src="../images/slimey/swing.gif" alt="Swinging" onclick="showImage(this.src)">
+                <img src="../images/slimey/boost.gif" alt="Boosting" onclick="showImage(this.src)">
+                <img src="../images/slimey/smash.gif" alt="Wall Smash" onclick="showImage(this.src)">
+            </div>
+        </div>
+
+        <div class="project-meta">
+            <div class="meta-item">
+                <h3>Technologies</h3>
+                <ul>
+                    <li>Unity Engine</li>
+                    <li>C# Programming</li>
+                </ul>
+            </div>
+            <div class="meta-item">
+                <h3>Timeline</h3>
+                <p>June 2025 17th - June 21st</p>
+            </div>
+            <div class="meta-item">
+                <h3>Role</h3>
+                <p>Solo Developer</p>
+            </div>
+        </div>
+
+        <div class="project-content visually-focused-content">
+            <div class="content-column">
+                <div class="content-block">
+                    <h2>About the Project</h2>
+                    <p>
+                        A 2D grapple-platformer tech demo where momentum is everything. You build up spin while
+                        swinging,
+                        release at top speed, and blast through breakable walls. It’s all physics-driven and designed
+                        around feel. I designed the pixel art and animations(except for the background) myself!
+                    </p>
+                </div>
+
+                <div class="content-block">
+                    <h2>Technical Highlights</h2>
+                    <ul>
+                        <li>Grapple system using DistanceJoint2D with dynamic rope length control.</li>
+                        <li>Spin-speed tracking with a boost mechanic triggered on release.</li>
+                        <li>Breakable walls triggered on impact with explosion and camera shake effects.</li>
+                        <li>Responsive SFX and VFX tied to gameplay states (e.g., boost-ready, max spin).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-column">
+                <div class="content-block">
+                    <h2>Development Focus</h2>
+                    <ul>
+                        <li>Experimenting with momentum-based movement using Unity’s physics system.</li>
+                        <li>Refining grapple controls for satisfying swing and release timing.</li>
+                        <li>Building modular boost and wall-destruction systems.</li>
+                        <li>Adding strong feedback through audio, VFX, and screen shake.</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>What I Learned</h2>
+                    <ul>
+                        <li>How to blend player input with physics-based motion for fluid gameplay.</li>
+                        <li>Using DistanceJoint2D effectively for responsive grappling.</li>
+                        <li>Synchronizing gameplay states with feedback systems (audio/visual).</li>
+                        <li>Modularizing gameplay logic to keep systems reusable and clean.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-links">
+            <a href="https://github.com/Jibbyie/game-a-week/tree/origin/Wk2_GrappleSwinger" class="btn-code"
+                target="_blank" rel="noopener noreferrer">View Source Code</a>
+            <a href="https://jibbyie.itch.io/slimey" class="btn-details" target="_blank" rel="noopener noreferrer">Play
+                Demo</a>
+            <a href="../index.html#projects" class="btn-back">Back to Projects</a>
+        </div>
+    </main>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Connect With Me</h2>
+            <div class="social-links">
+                <a href="https://github.com/jibbyie" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jibril-abdulazeez/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://instagram.com/jibbyie" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://jibbyie.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Jibby's Corner</p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/c484d70e2a.js" crossorigin="anonymous"></script>
+    <script>
+        function showImage(src) {
+            document.querySelector('.main-media img').src = src;
+        }
+    </script>
+</body>
+
+</html>
