@@ -7,6 +7,39 @@
     <title>Jibby's Corner</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="/jibby.jpg" type="image/x-icon">
+    <style>
+        .filter-controls {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .filter-btn {
+            background-color: #333;
+            color: white;
+            border: 2px solid #555;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .filter-btn:hover {
+            background-color: #444;
+            border-color: #777;
+        }
+
+        .filter-btn.active {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        /* Style for hiding projects */
+        .project.hide {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -36,7 +69,7 @@
         </div>
     </section>
 
-    <!-- Start of About section -->
+    <!-- About Me Section -->
     <section id="about">
         <div class="container about-container">
             <div class="about-image">
@@ -45,30 +78,23 @@
             <div class="about-text">
                 <h2>About Me</h2>
                 <p>
-                    I’m a gameplay programmer and indie developer based in Dublin, Ireland. I specialize in building
-                    mechanics that are responsive, rewarding, and most importantly, fun!
+                    I'm a gameplay programmer based in Dublin, Ireland, focused on building fun, responsive mechanics in Unity. 
+                    I’m currently working on game jams and larger solo projects.
                 </p>
                 <p>
-                    My background is in Computer Science (TU Dublin) and I’m completing a Master’s in Creative Digital
-                    Media & UX. That means I blend technical skills with a strong sense of player experience.
+                    With a BSc in Computer Science (TU Dublin) and a Master’s in Creative Digital Media & UX in progress, 
+                    I bring both technical skill and player-focused design to every project.
                 </p>
                 <p>
-                    Right now, I'm focused on prototyping game systems in Unity, learning from every project, and
-                    steadily leveling up. Most of what you see here was built solo, from code to visuals to design.
+                    Whether collaborating with a team or building something on my own, my goal is to make games that stick with players.
                 </p>
                 <p>
-                    Whether I end up joining a studio or launching something on my own, the goal stays the same: make
-                    games that people remember.
+                    Always open to feedback, collaboration, or just talking dev. Feel free to reach out!
                 </p>
-                <p>
-                    Feel free to reach out. I’m always open to feedback, collaboration, or just talking game dev.
-                </p>
+                
             </div>
         </div>
     </section>
-
-    <!-- End of About section -->
-
 
     <!-- START: Highlighted Project -->
     <section id="highlighted">
@@ -112,78 +138,87 @@
     </section>
     <!-- END: Highlighted Project -->
 
-
-    <!-- START: Game Demos section -->
+    <!-- Projects Section -->
     <section id="projects">
         <div class="container">
-            <h2 style="color: white;">Game Demos</h2>
+            <h2 style="color: white;">Games</h2>
 
-            <!-- Added project-cards div for grid layout -->
-
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="large-project">Large Projects</button>
+                <button class="filter-btn" data-filter="game-jam">Game Jams</button>
+                <button class="filter-btn" data-filter="demo">Playable Demo</button>
+                <button class="filter-btn" data-filter="prototype">Prototypes</button>
+            </div>
             <div class="project-cards">
-                <!-- 20 Games Challenge -->
-                <div class="project">
+
+                <!-- Rizztaurant -->
+                <div class="project" data-category="large-project">
                     <div class="project-media">
-                        <img src="images/20games.png" alt="20 Games Challenge" class="project-gif">
+                        <img src="images/rizztaurant/chefrizzrunsandcomesback.gif" alt="Rizztaurant Title Screen"
+                            class="project-gif">
                     </div>
                     <div class="project-info">
-                        <h3>20 Games Challenge</h3>
+                        <h3>Rizztaurant</h3>
                         <div class="project-tech">
-                            <span>Unity 2D</span>
-                            <span>Unity 3D</span>
+                            <span>Large Project</span>
+                            <span>Ren'Py</span>
+                            <span>Python</span>
                         </div>
-                        <p>My rendition of the games covered in the 20 Games Challenge:<br> The goal of the 20 Games
-                            Challenge is to learn game development in 20 games or less. You don’t have to complete all
-                            20 games, but I would recommend finishing at least 10. You should also set some final goal
-                            for yourself; like creating an RTS or a full FPS. You know why you want to make games, so
-                            let the destination guide your unique journey.</p>
+                        <p>A visual novel set in a chaotic restaurant where your choices shape the
+                            narrative.
+                            Built as a duo in Ren'Py with custom art, writing, and UI, a comedic exploration of
+                            branching
+                            dialogue and expressive character design.</p>
+                        <ul class="project-highlights">
+                            <li>Persistent branching dialogue built with Python and Ren'Py</li>
+                            <li>Hand-drawn characters, backgrounds, and UI</li>
+                            <li>Custom transitions, animations, and timed comedic beats</li>
+                        </ul>
                         <div class="project-links">
-                            <a href="projects/20Games.html" class="btn-play">Project Details</a>
-                            <a href="https://github.com/Jibbyie/20GamesChallenge" class="btn-code" target="_blank"
+                            <a href="projects/Rizztaurant.html" class="btn-play">Project Details</a>
+                            <a href="https://github.com/Jibbyie/RizztaurantDemo" class="btn-code" target="_blank"
                                 rel="noopener noreferrer">View Source Code</a>
-                            <a href="https://docs.google.com/document/d/1CPfz_5V4OiDKKRcJdU_3TnbmwnFcf4I4BTtayqDgHes/edit?tab=t.0#heading=h.al99h7gcr19"
-                                class="btn-details">DevLog</a>
                         </div>
                     </div>
                 </div>
 
-                 <!-- Knock Knock -->
-                <div class="project">
+                <!-- Lights Out -->
+                <div class="project" data-category="demo">
                     <div class="project-media">
-                        <img src="images/knockknock/peeking.gif" alt="Knock Knock" class="project-gif">
+                        <img src="images/lightsout/main.gif" alt="Lights Out" class="project-gif">
                     </div>
                     <div class="project-info">
-                        <h3>Knock Knock</h3>
+                        <h3>Lights Out</h3>
                         <div class="project-tech">
-                            <span>Unity3D</span>
+                            <span>Playable Demo</span>
+                            <span>Unity 3D</span>
                             <span>C#</span>
-                            <span>Single Player</span>
                         </div>
-                        <p>"Knock Knock" is a short psychological horror prototype where you're stuck in your apartment
-                            with strangers knocking at your door. Some are safe, some aren’t. You use a peephole and
-                            voice lines to figure out who’s who. I even got my friends to help voice it!</p>
+                        <p>A short psychological horror prototype built in 3 days. You must keep the lights on to
+                            survive, but the longer you last, the more the room changes…</p>
                         <ul class="project-highlights">
-                            <li>Randomised characters (safe vs. mimic)</li>
-                            <li>Audio-based anxiety distortion system</li>
-                            <li>Peephole interaction + proximity-based decisions</li>
+                            <li>Randomized light switch and event system</li>
+                            <li>Timer-based blackout and fail state logic</li>
+                            <li>Audio layering and flicker effects for tension</li>
                         </ul>
                         <div class="project-links">
-                            <a href="projects/knockknock.html" class="btn-play">Project Details</a>
-                            <a href="https://jibbyie.itch.io/knock-knock-poc" class="btn-details" target="_blank"
+                            <a href="projects/lightsout.html" class="btn-play">Project Details</a>
+                            <a href="https://jibbyie.itch.io/lights-out" class="btn-details" target="_blank"
                                 rel="noopener noreferrer">Download Demo</a>
                         </div>
                     </div>
                 </div>
 
-
-                <!-- 2D Grapple Mechanic -->
-                <div class="project">
+                <!-- Slimey -->
+                <div class="project" data-category="prototype">
                     <div class="project-media">
                         <img src="images/slimey/main.gif" alt="Slimey Grapple Demo" class="project-gif">
                     </div>
                     <div class="project-info">
                         <h3>Slimey</h3>
                         <div class="project-tech">
+                            <span>Prototype</span>
                             <span>Unity2D</span>
                             <span>C#</span>
                             <span>Aseprite</span>
@@ -208,24 +243,52 @@
                     </div>
                 </div>
 
+                <!-- Knock Knock -->
+                <div class="project" data-category="prototype">
+                    <div class="project-media">
+                        <img src="images/knockknock/peeking.gif" alt="Knock Knock" class="project-gif">
+                    </div>
+                    <div class="project-info">
+                        <h3>Knock Knock</h3>
+                        <div class="project-tech">
+                            <span>Prototype</span>
+                            <span>Unity3D</span>
+                            <span>C#</span>
+                            <span>Single Player</span>
+                        </div>
+                        <p>"Knock Knock" is a short psychological horror prototype where you're stuck in your apartment
+                            with strangers knocking at your door. Some are safe, some aren’t. You use a peephole and
+                            voice lines to figure out who’s who. I even got my friends to help voice it!</p>
+                        <ul class="project-highlights">
+                            <li>Randomised characters (safe vs. mimic)</li>
+                            <li>Audio-based anxiety distortion system</li>
+                            <li>Peephole interaction + proximity-based decisions</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="projects/knockknock.html" class="btn-play">Project Details</a>
+                            <a href="https://jibbyie.itch.io/knock-knock-poc" class="btn-details" target="_blank"
+                                rel="noopener noreferrer">Download Demo</a>
+                        </div>
+                    </div>
+                </div>
 
-                <!-- Multiplayer Proof Of Concept -->
-                <div class="project">
+                <!-- Multiplayer -->
+                <div class="project" data-category="prototype">
                     <div class="project-media">
                         <img src="images/multiplayer/lobbysetup.gif" alt="Multiplayer 2D Test" class="project-gif">
                     </div>
                     <div class="project-info">
-                        <h3>2D Multiplayer Prototype (WIP)</h3>
+                        <h3>2D Multiplayer</h3>
                         <div class="project-tech">
+                            <span>Prototype</span>
                             <span>Unity 2D</span>
                             <span>C#</span>
                             <span>Netcode for GameObjects</span>
                         </div>
                         <p>
-                            A sandbox for learning Unity multiplayer via NGO. Built from scratch to understand server
+                            A sandbox for learning Unity multiplayer via NGO. Built from scratch to understand the basics: server
                             authority,
-                            player ownership, and multiplayer UI syncing. Still very rough, but improving each
-                            iteration.
+                            player ownership, and multiplayer UI syncing.
                         </p>
                         <ul class="project-highlights">
                             <li>Server-authoritative damage, spawning, and player input</li>
@@ -239,70 +302,11 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Lights Out Proof Of Concept -->
-                <div class="project">
-                    <div class="project-media">
-                        <img src="images/lightsout/main.gif" alt="Lights Out" class="project-gif">
-                    </div>
-                    <div class="project-info">
-                        <h3>Lights Out</h3>
-                        <div class="project-tech">
-                            <span>Unity 3D</span>
-                            <span>C#</span>
-                        </div>
-                        <p>A short psychological horror prototype built in 3 days. You must keep the lights on to
-                            survive, but the longer you last, the more the room changes…</p>
-                        <ul class="project-highlights">
-                            <li>Randomized light switch and event system</li>
-                            <li>Timer-based blackout and fail state logic</li>
-                            <li>Audio layering and flicker effects for tension</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="projects/lightsout.html" class="btn-play">Project Details</a>
-                            <a href="https://jibbyie.itch.io/lights-out" class="btn-details" target="_blank"
-                                rel="noopener noreferrer">Download Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Rizztaurant Visual Novel (Work In Progress) -->
-                <div class="project">
-                    <div class="project-media">
-                        <img src="images/rizztaurant/chefrizzrunsandcomesback.gif" alt="Rizztaurant Title Screen"
-                            class="project-gif">
-                    </div>
-                    <div class="project-info">
-                        <h3>Rizztaurant</h3>
-                        <div class="project-tech">
-                            <span>Ren'Py</span>
-                            <span>Python</span>
-                        </div>
-                        <p>A visual novel set in a chaotic restaurant where your choices shape the
-                            narrative.
-                            Built as a duo in Ren'Py with custom art, writing, and UI, a comedic exploration of
-                            branching
-                            dialogue and expressive character design.</p>
-                        <ul class="project-highlights">
-                            <li>Persistent branching dialogue built with Python and Ren'Py</li>
-                            <li>Hand-drawn characters, backgrounds, and UI</li>
-                            <li>Custom transitions, animations, and timed comedic beats</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="projects/Rizztaurant.html" class="btn-play">Project Details</a>
-                            <a href="https://github.com/Jibbyie/RizztaurantDemo" class="btn-code" target="_blank"
-                                rel="noopener noreferrer">View Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more <div class="project">...</div> elements here for future projects -->
-
-            </div> <!-- End project-cards -->
+            </div>
         </div>
     </section>
-    <!-- END: Projects section -->
 
-    <!-- START: Skills Section -->
+    <!-- Skills Section -->
     <section id="skills">
         <div class="container">
             <h2>My Skills</h2>
@@ -346,49 +350,62 @@
             </div>
         </div>
     </section>
-    <!-- END: Skills Section -->
-
-
-    <!-- START: Contact section with Icons -->
     <section id="contact">
         <div class="container">
             <h2>Connect With Me</h2>
             <div class="social-links">
-                <!-- GitHub -->
                 <a href="https://github.com/jibbyie" target="_blank" rel="noopener noreferrer"
                     aria-label="GitHub Profile">
                     <i class="fab fa-github"></i>
                 </a>
-                <!-- LinkedIn -->
                 <a href="https://www.linkedin.com/in/jibril-abdulazeez/" target="_blank" rel="noopener noreferrer"
                     aria-label="LinkedIn Profile">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <!-- Instagram (Make sure the link is correct or remove if not used) -->
                 <a href="https://instagram.com/jibbyie" target="_blank" rel="noopener noreferrer"
                     aria-label="Instagram Profile">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <!-- Itch.io -->
                 <a href="https://jibbyie.itch.io" target="_blank" rel="noopener noreferrer"
                     aria-label="Itch.io Profile">
-                    <i class="fab fa-itch-io"></i> <!-- Font Awesome has an itch.io icon! -->
-                </a>
-                <!-- Example: Email -->
-                <!-- <a href="mailto:your.email@example.com" aria-label="Send Email">
-                    <i class="fas fa-envelope"></i>
-                </a> -->
+                    <i class="fab fa-itch-io"></i> </a>
             </div>
         </div>
     </section>
 
-    <!-- END: Contact section with Icons -->
     <footer>
         <div class="container">
-            <p>© 2025 Jibby's Corner</p> <!-- Updated year -->
+            <p>© 2025 Jibby's Corner</p>
         </div>
     </footer>
     <script src="https://kit.fontawesome.com/c484d70e2a.js" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+
+            const projects = document.querySelectorAll('#projects .project');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Set active class on button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const filter = button.dataset.filter;
+
+                    projects.forEach(project => {
+                        // Check if project should be shown
+                        if (filter === 'all' || project.dataset.category === filter) {
+                            project.classList.remove('hide');
+                        } else {
+                            project.classList.add('hide');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
