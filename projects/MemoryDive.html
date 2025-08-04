@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Dive | Game Jam Project</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project-details.css">
+    <link rel="icon" href="/jibby.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <div class="container">
+            <h1><a href="../index.html" style="color: white; text-decoration: none;">Home</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="https://github.com/Jibbyie" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://jibbyie.itch.io/" target="_blank" rel="noopener noreferrer">Itch</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                    <li><a href="../Tech_CV.pdf" target="_blank" class="nav-resume-button">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Main Project Content -->
+    <main class="container project-detail">
+        <h1>Memory Dive</h1>
+
+        <!-- Project Media Gallery -->
+        <div class="project-showcase">
+            <div class="main-media">
+                <!-- Main GIF from the index page -->
+                <img id="main-gif" src="../images/memorydive/monsterhiding.gif" alt="Memory Dive Gameplay"
+                    data-caption="Core gameplay loop of collecting items while avoiding the monster.">
+                <p id="main-caption" class="gif-caption">Core gameplay loop of collecting items while avoiding the monster. (Main View)</p>
+            </div>
+            <div class="project-gallery">
+             
+                <div class="gif-container">
+                    <img class="gif-thumb" src="/images/memorydive/bubbleanditem.gif" alt="Collecting an item & gaining oxygen"
+                        data-caption="Collecting an item & gaining oxygen">
+                    <p class="gif-caption">Collecting an item & gaining oxygen.</p>
+                </div>
+               
+            </div>
+        </div>
+
+        <!-- Project Metadata -->
+        <div class="project-meta">
+            <div class="meta-item">
+                <h3>Technologies</h3>
+                <ul>
+                    <li>Unity Engine (3D)</li>
+                    <li>C#</li>
+                </ul>
+            </div>
+            <div class="meta-item">
+                <h3>Timeline</h3>
+                <p>Unpolished Game Jam (1 Week)</p>
+            </div>
+            <div class="meta-item">
+                <h3>Team</h3>
+                <p>3-Person Team: Solo Dev, Artist & Composor</p>
+            </div>
+        </div>
+
+        <!-- Detailed Project Description -->
+        <div class="project-content visually-focused-content">
+            <div class="content-column">
+                <div class="content-block">
+                    <h2>About the Project</h2>
+                    <p>
+                        Memory Dive was my first-ever game jam project, created in one week for the Unpolished Game Jam. 
+                        <br><br> As the solo developer on a three-person team, I was responsible for all programming.
+                        <br><br>
+                         The game is an underwater stealth-horror experience where players must collect lost objects while managing their oxygen 
+                         and hiding from a mysterious creature that stalks them.
+                    </p>
+                </div>
+
+                <div class="content-block">
+                    <h2>Technical Highlights</h2>
+                    <ul>
+                        <li><strong>Centralized Game Manager:</strong> A robust `GameManager` class controls the main game loop, handling win/loss conditions, UI updates (item collection, memory text), audio cues, and event-based monster spawning.</li>
+                        <li><strong>State-Based Enemy AI:</strong> The monster's AI switches between states, patrolling randomly when the player is hidden and actively pursuing them when they are exposed. Its spawning and despawning are tied to a timer to create waves of tension.</li>
+                        <li><strong>Player State & Resource System:</strong> Separate scripts manage player states (`PlayerController`), stats (`PlayerStats`), and actions (`PlayerHiding`, `PlayerCollector`). The oxygen system depletes over time, can be replenished, and uses a bracketed system to trigger different UI and audio feedback.</li>
+                        <li><strong>Modular Stealth Mechanic:</strong> The hiding system is simple but effective; entering a "HideSpot" tag triggers a state change in the `PlayerController`, which the `MonsterAI` checks before deciding whether to chase the player.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-column">
+                <div class="content-block">
+                    <h2>Development Focus</h2>
+                    <ul>
+                        <li>Building a complete game loop from scratch under a tight, one-week deadline.</li>
+                        <li>Implementing foundational gameplay systems: player movement, resource management, stealth, and collection.</li>
+                        <li>Creating a simple but effective enemy AI to serve as the core threat.</li>
+                        <li>Learning to scope a project appropriately for a game jam.</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>What I Learned</h2>
+                    <ul>
+                        <li><strong>Interdisciplinary Collaboration:</strong> Gained valuable experience as the sole programmer working alongside an artist and a composer, learning to communicate technical needs and integrate their assets into the game.</li>
+                        <li><strong>System Decoupling:</strong> Learned the importance of separating concerns into different scripts (e.g., `PlayerMovement`, `PlayerStats`, `PlayerHiding`). This made the code cleaner and easier to debug under pressure.</li>
+                        <li><strong>Event-Driven Game Flow:</strong> Developed a better understanding of how to use a central `GameManager` to listen for events (like collecting an item) and trigger reactions (like updating the UI or spawning the monster).</li>
+                        <li><strong>AI State Logic:</strong> Implemented my first state-based AI, learning how to use simple boolean flags (like `isHiding`) to create dynamic and responsive enemy behavior.</li>
+                        <li><strong>Scope Management in a Jam:</strong> This project was a crucial lesson in prioritizing core features and keeping systems simple but effective to ensure a finished, playable game was delivered on time.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Links to Play/View Code -->
+        <div class="project-links">
+            <a href="https://jibbyie.itch.io/memorydive" class="btn-play" target="_blank"
+            rel="noopener noreferrer">Play on Itch.io</a>
+            <a href="https://github.com/Jibbyie/Unpolished-GameJam"
+            class="btn-code" target="_blank" rel="noopener noreferrer">View Source Code</a>
+            <a href="../index.html#projects" class="btn-back">Back to Projects</a>
+        </div>
+    </main>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Connect With Me</h2>
+            <div class="social-links">
+                <a href="https://github.com/jibbyie" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jibril-abdulazeez/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://instagram.com/jibbyie" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://jibbyie.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Jibby's Corner</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/c484d70e2a.js" crossorigin="anonymous"></script>
+    <script>
+        // JavaScript for swapping gallery images
+        document.addEventListener("DOMContentLoaded", () => {
+            const mainGif = document.getElementById("main-gif");
+            const mainCaption = document.getElementById("main-caption");
+            const thumbs = document.querySelectorAll(".gif-thumb");
+
+            thumbs.forEach((thumb) => {
+                thumb.addEventListener("click", () => {
+                    const tempSrc = mainGif.src;
+                    const tempAlt = mainGif.alt;
+                    const tempCaption = mainGif.getAttribute("data-caption");
+
+                    mainGif.src = thumb.src;
+                    mainGif.alt = thumb.alt;
+                    mainGif.setAttribute("data-caption", thumb.getAttribute("data-caption"));
+                    mainCaption.textContent = thumb.getAttribute("data-caption") + " (Main View)";
+
+                    thumb.src = tempSrc;
+                    thumb.alt = tempAlt;
+                    thumb.setAttribute("data-caption", tempCaption);
+
+                    const captionElement = thumb.nextElementSibling;
+                    if (captionElement && captionElement.classList.contains("gif-caption")) {
+                        captionElement.textContent = tempCaption;
+                    }
+                });
+            });
+
+            // Fullscreen on main gif click
+            mainGif.style.cursor = "pointer";
+            mainGif.addEventListener("click", () => {
+                if (mainGif.requestFullscreen) {
+                    mainGif.requestFullscreen();
+                } else if (mainGif.webkitRequestFullscreen) {
+                    mainGif.webkitRequestFullscreen();
+                } else if (mainGif.msRequestFullscreen) {
+                    mainGif.msRequestFullscreen();
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
