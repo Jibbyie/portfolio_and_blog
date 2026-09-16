@@ -13,18 +13,16 @@
 <body>
     <!-- Header Navigation -->
     <header>
-        <div class="container">
-            <h1><a href="../index.html" style="color: white; text-decoration: none;">Jibril Abdulazeez.</a></h1>
-            <nav>
+        <div class="container header-inner">
+            <a class="brand" href="../index.html" aria-label="Jibril Abdulazeez home">Jibril Abdulazeez<span>.</span></a>
+            <nav aria-label="Primary navigation">
                 <ul>
                     <li><a href="../index.html#about">About</a></li>
                     <li><a href="../index.html#experience">Experience</a></li>
-                    <li><a href="https://github.com/Jibbyie" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                    <li><a href="https://jibbyie.itch.io/" target="_blank" rel="noopener noreferrer">Itch</a></li>
                     <li><a href="../index.html#projects">Projects</a></li>
                     <li><a href="../index.html#skills">Skills</a></li>
                     <li><a href="../index.html#contact">Contact</a></li>
-                    <li><a href="../CV_Jibril_Abdulazeez.pdf" target="_blank" class="nav-resume-button">Resume</a></li>
+                    <li><a href="../CV_Jibril_Abdulazeez.pdf" target="_blank" rel="noopener noreferrer" class="nav-resume-button">Resume</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,9 +30,20 @@
     
     <!-- Main Project Content -->
     <main class="container project-detail">
-        <h1>Memory Dive</h1>
+        <div class="project-header">
+            <div>
+                <p class="project-eyebrow">Personal project · Unpolished Game Jam</p>
+                <h1>Memory Dive</h1>
+                <p class="project-summary">An underwater stealth-horror game built in one week around collection, oxygen management, hiding, and escalating enemy pressure.</p>
+            </div>
+            <span class="project-status">Game Jam</span>
+        </div>
 
-        <!-- Project Media Gallery -->
+        <div class="project-actions">
+            <a href="https://jibbyie.itch.io/memorydive" class="btn-play" target="_blank" rel="noopener noreferrer">Play on Itch.io</a>
+            <a href="https://github.com/Jibbyie/Unpolished-GameJam" class="btn-code" target="_blank" rel="noopener noreferrer">View Source Code</a>
+        </div>
+
         <div class="project-showcase">
             <div class="main-media">
                 <!-- Main GIF from the index page -->
@@ -45,7 +54,7 @@
             <div class="project-gallery">
              
                 <div class="gif-container">
-                    <img class="gif-thumb" src="/images/memorydive/bubbleanditem.gif" alt="Collecting an item & gaining oxygen"
+                    <img class="gif-thumb" src="../images/memorydive/bubbleanditem.gif" alt="Collecting an item & gaining oxygen"
                         data-caption="Collecting an item & gaining oxygen">
                     <p class="gif-caption">Collecting an item & gaining oxygen.</p>
                 </div>
@@ -53,98 +62,72 @@
             </div>
         </div>
 
-        <!-- Project Metadata -->
         <div class="project-meta">
             <div class="meta-item">
-                <h3>Technologies</h3>
-                <ul>
-                    <li>Unity Engine (3D)</li>
-                    <li>C#</li>
-                </ul>
-            </div>
-            <div class="meta-item">
-                <h3>Timeline</h3>
-                <p>Unpolished Game Jam (1 Week)</p>
+                <h3>My role</h3>
+                <p>Solo Programmer</p>
             </div>
             <div class="meta-item">
                 <h3>Team</h3>
-                <p>3-Person Team: Solo Dev, Artist & Composor</p>
+                <p>Three-person team</p>
+            </div>
+            <div class="meta-item">
+                <h3>Timeline</h3>
+                <p>Unpolished Game Jam · 1 week</p>
+            </div>
+            <div class="meta-item">
+                <h3>Technology</h3>
+                <p>Unity · C# · Gameplay systems · Enemy behavior</p>
+            </div>
+            <div class="meta-item">
+                <h3>Status</h3>
+                <p>Playable release</p>
             </div>
         </div>
 
-        <!-- Detailed Project Description -->
-        <div class="project-content visually-focused-content">
-            <div class="content-column">
-                <div class="content-block">
-                    <h2>About the Project</h2>
-                    <p>
-                        Memory Dive was created in one week for the Unpolished Game Jam. 
-                        <br><br> As the solo developer on a three-person team, I was responsible for all programming.
-                        <br><br>
-                         The game is an underwater stealth-horror experience where players must collect lost objects while managing their oxygen 
-                         and hiding from a mysterious creature that stalks them.
-                    </p>
-                </div>
-
-                <div class="content-block">
-                    <h2>Technical Highlights</h2>
-                    <ul>
-                        <li><strong>Centralized Game Manager:</strong> A robust `GameManager` class controls the main game loop, handling win/loss conditions, UI updates (item collection, memory text), audio cues, and event-based monster spawning.</li>
-                        <li><strong>State-Based Enemy AI:</strong> The monster's AI switches between states, patrolling randomly when the player is hidden and actively pursuing them when they are exposed. Its spawning and despawning are tied to a timer to create waves of tension.</li>
-                        <li><strong>Player State & Resource System:</strong> Separate scripts manage player states (`PlayerController`), stats (`PlayerStats`), and actions (`PlayerHiding`, `PlayerCollector`). The oxygen system depletes over time, can be replenished, and uses a bracketed system to trigger different UI and audio feedback.</li>
-                        <li><strong>Modular Stealth Mechanic:</strong> The hiding system is simple but effective; entering a "HideSpot" tag triggers a state change in the `PlayerController`, which the `MonsterAI` checks before deciding whether to chase the player.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="content-column">
-                <div class="content-block">
-                    <h2>Development Focus</h2>
-                    <ul>
-                        <li>Building a complete game loop from scratch under a tight, one-week deadline.</li>
-                        <li>Implementing foundational gameplay systems: player movement, resource management, stealth, and collection.</li>
-                        <li>Creating a simple but effective enemy AI to serve as the core threat.</li>
-                        <li>Learning to scope a project appropriately for a game jam.</li>
-                    </ul>
-                </div>
-
-                <div class="content-block">
-                    <h2>What I Learned</h2>
-                    <ul>
-                        <li><strong>Interdisciplinary Collaboration:</strong> Gained valuable experience as the sole programmer working alongside an artist and a composer, learning to communicate technical needs and integrate their assets into the game.</li>
-                        <li><strong>System Decoupling:</strong> Learned the importance of separating concerns into different scripts (e.g., `PlayerMovement`, `PlayerStats`, `PlayerHiding`). This made the code cleaner and easier to debug under pressure.</li>
-                        <li><strong>Event-Driven Game Flow:</strong> Developed a better understanding of how to use a central `GameManager` to listen for events (like collecting an item) and trigger reactions (like updating the UI or spawning the monster).</li>
-                        <li><strong>AI State Logic:</strong> Implemented my first state-based AI, learning how to use simple boolean flags (like `isHiding`) to create dynamic and responsive enemy behavior.</li>
-                        <li><strong>Scope Management in a Jam:</strong> This project was a crucial lesson in prioritizing core features and keeping systems simple but effective to ensure a finished, playable game was delivered on time.</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="case-study-grid">
+            <section class="case-study-block case-study-wide">
+                <p class="case-study-label">My contribution</p>
+                <h2>Building the complete gameplay loop.</h2>
+                <p>As the solo programmer on a three-person team, I built the player movement, collection, oxygen, hiding, enemy behavior, UI, and game-flow systems needed to turn the concept into a complete playable jam project.</p>
+            </section>
+            <section class="case-study-block">
+                <p class="case-study-label">Technical highlights</p>
+                <h2>Systems that coordinate tension.</h2>
+                <ul class="case-study-list">
+                    <li>A central <code>GameManager</code> coordinates win/loss conditions, collection updates, memory text, audio cues, and timed enemy spawning.</li>
+                    <li>Separated player movement, stats, hiding, and collection responsibilities so the one-week codebase could be debugged and extended quickly.</li>
+                    <li>Used state-based enemy behavior to switch between patrol and pursuit based on whether the player was hidden.</li>
+                    <li>Built an oxygen resource loop with replenishment and threshold-based UI and audio feedback.</li>
+                </ul>
+            </section>
+            <section class="case-study-block">
+                <p class="case-study-label">Development challenges</p>
+                <h2>Challenge → approach → result</h2>
+                <ul class="case-study-list challenge-list">
+                    <li><strong>Many systems, one week:</strong> Centralised game flow and separated player responsibilities so core systems could be integrated without turning the jam build into one monolithic script.</li>
+                    <li><strong>Readable tension:</strong> Combined oxygen thresholds, hiding state, timed spawning, and audio/UI feedback to make the threat legible to the player.</li>
+                    <li><strong>Team integration:</strong> Worked with the artist and composer to integrate assets and audio into a playable loop under the deadline.</li>
+                </ul>
+            </section>
+            <section class="case-study-block">
+                <p class="case-study-label">Development decisions</p>
+                <h2>Simple states, clear signals.</h2>
+                <p>The project prioritised explicit player states and event-driven reactions over a larger framework. That kept the implementation understandable while allowing collection, oxygen, hiding, and enemy encounters to react consistently.</p>
+            </section>
+            <section class="case-study-block">
+                <p class="case-study-label">Outcome</p>
+                <h2>A complete one-week playable build.</h2>
+                <p>Memory Dive delivered a finished stealth-horror game loop for the Unpolished Game Jam, with collection, resource management, hiding, enemy pressure, and win/loss states working together in a playable release.</p>
+            </section>
         </div>
 
-        <!-- Links to Play/View Code -->
         <div class="project-links">
-            <a href="https://jibbyie.itch.io/memorydive" class="btn-play" target="_blank"
-            rel="noopener noreferrer">Play on Itch.io</a>
-            <a href="https://github.com/Jibbyie/Unpolished-GameJam"
-            class="btn-code" target="_blank" rel="noopener noreferrer">View Source Code</a>
             <a href="../index.html#projects" class="btn-back">Back to Projects</a>
         </div>
     </main>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Connect With Me</h2>
-            <div class="social-links">
-                <a href="https://github.com/jibbyie" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/jibril-abdulazeez/" target="_blank"><i
-                        class="fab fa-linkedin-in"></i></a>
-                <a href="https://instagram.com/jibbyie" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://jibbyie.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">

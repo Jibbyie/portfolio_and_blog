@@ -12,25 +12,34 @@
 
 <body>
     <header>
-        <div class="container">
-            <h1><a href="../index.html" style="color: white; text-decoration: none;">Jibril Abdulazeez.</a></h1>
-            <nav>
+        <div class="container header-inner">
+            <a class="brand" href="../index.html" aria-label="Jibril Abdulazeez home">Jibril Abdulazeez<span>.</span></a>
+            <nav aria-label="Primary navigation">
                 <ul>
                     <li><a href="../index.html#about">About</a></li>
                     <li><a href="../index.html#experience">Experience</a></li>
-                    <li><a href="https://github.com/Jibbyie" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                    <li><a href="https://jibbyie.itch.io/" target="_blank" rel="noopener noreferrer">Itch</a></li>
                     <li><a href="../index.html#projects">Projects</a></li>
                     <li><a href="../index.html#skills">Skills</a></li>
                     <li><a href="../index.html#contact">Contact</a></li>
-                    <li><a href="../CV_Jibril_Abdulazeez.pdf" target="_blank" class="nav-resume-button">Resume</a></li>
+                    <li><a href="../CV_Jibril_Abdulazeez.pdf" target="_blank" rel="noopener noreferrer" class="nav-resume-button">Resume</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main class="container project-detail">
-        <h1>Rizztaurant (Work In Progress)</h1>
+        <div class="project-header">
+            <div>
+                <p class="project-eyebrow">Personal project · Narrative systems</p>
+                <h1>Rizztaurant</h1>
+                <p class="project-summary">A comedic visual novel built around branching dialogue, persistent choices, timed events, and expressive UI.</p>
+            </div>
+            <span class="project-status">Work in Progress</span>
+        </div>
+
+        <div class="project-actions">
+            <a href="https://github.com/Jibbyie/RizztaurantDemo" class="btn-code" target="_blank" rel="noopener noreferrer">View Source Code</a>
+        </div>
 
         <div class="project-showcase">
             <div class="main-media">
@@ -81,72 +90,65 @@
         </div>
         <div class="project-meta">
             <div class="meta-item">
-                <h3>Technologies</h3>
-                <ul>
-                    <li>Ren'Py</li>
-                    <li>Python</li>
-                    <li>Audacity</li>
-                </ul>
+                <h3>My role</h3>
+                <p>Programmer and narrative systems developer</p>
+            </div>
+            <div class="meta-item">
+                <h3>Team</h3>
+                <p>Jibril Abdulazeez and Daria Babaskina</p>
             </div>
             <div class="meta-item">
                 <h3>Timeline</h3>
                 <p>Independent project</p>
             </div>
             <div class="meta-item">
-                <h3>Team</h3>
-                <p>Jibril Abdulazeez</p>
-                <p><a href="https://www.dariababaskina.com/" target="_blank" rel="noopener noreferrer">Daria Babaskina</a></p>
+                <h3>Technology</h3>
+                <p>Ren'Py · Python · Narrative systems</p>
+            </div>
+            <div class="meta-item">
+                <h3>Status</h3>
+                <p>In development</p>
             </div>
         </div>
 
-        <div class="project-content visually-focused-content">
-            <div class="content-column">
-                <div class="content-block">
-                    <h2>About the Project</h2>
-                    <p><strong>Rizztaurant</strong> is a visual novel set in a chaotic yet empty restaurant where
-                        you must charm your way through a bizarre encounter and reel in an absurd chef. Built in Ren'Py and
-                        Python, it's a stylistic blend of comedy, narrative design, and expressive character art, all
-                        created by me except for the soundtrack. The project explores timing, tone, and interactive
-                        dialogue as tools for both humour and connection.</p>
-                </div>
-
-                <div class="content-block">
-                    <h2>Technical Highlights</h2>
-                    <ul>
-                        <li>Branching dialogue structure with persistent choice tracking</li>
-                        <li>Custom UI styling and animated character expressions</li>
-                        <li>Scene transitions, sound mixing, and timed dialogue reveals</li>
-                        <li>Script modularity across narrative chapters using Python logic</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="content-column">
-                <div class="content-block">
-                    <h2>Development Focus</h2>
-                    <ul>
-                        <li>Writing expressive, comedic dialogue with mechanical consequences</li>
-                        <li>Designing character-driven narrative arcs and pacing</li>
-                        <li>Creating all visual assets including sprite art and backgrounds</li>
-                        <li>Establishing a modular codebase for future expansion</li>
-                    </ul>
-                </div>
-
-                <div class="content-block">
-                    <h2>What I’ve Learned So Far</h2>
-                    <ul>
-                        <li>Managing visual storytelling with Ren'Py's scripting engine</li>
-                        <li>Balancing humour with character consistency and branching logic</li>
-                        <li>Integrating original artwork into scripted gameplay flow</li>
-                        <li>Organising narrative complexity across multiple act files</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="case-study-grid">
+            <section class="case-study-block case-study-wide">
+                <p class="case-study-label">My contribution</p>
+                <h2>Programming the rhythm of an interactive story.</h2>
+                <p>I built the Ren'Py and Python systems that connect dialogue, player choices, scene transitions, character presentation, UI, sound, and timed comedic beats. The visual and narrative work supports the programming problem: making branching interactions feel coherent and responsive.</p>
+            </section>
+            <section class="case-study-block">
+                <p class="case-study-label">Technical highlights</p>
+                <h2>Persistent narrative state.</h2>
+                <ul class="case-study-list">
+                    <li>Tracked branching choices so earlier decisions could affect later dialogue and scene flow.</li>
+                    <li>Used Python logic to keep narrative chapters modular rather than placing the entire story in one script.</li>
+                    <li>Implemented custom UI styling, animated character expressions, scene transitions, and timed dialogue reveals.</li>
+                    <li>Integrated sound and presentation cues so timing carried the intended comedic rhythm.</li>
+                </ul>
+            </section>
+            <section class="case-study-block">
+                <p class="case-study-label">Development challenges</p>
+                <h2>Challenge → approach → result</h2>
+                <ul class="case-study-list challenge-list">
+                    <li><strong>Branching complexity:</strong> Persistent choice tracking kept consequences readable while allowing scenes to be authored independently.</li>
+                    <li><strong>Timing:</strong> Dialogue reveals, transitions, character animation, and sound were coordinated as one presentation sequence rather than isolated effects.</li>
+                    <li><strong>Iteration:</strong> Modular chapter scripts made it easier to revise narrative beats without destabilising the rest of the project.</li>
+                </ul>
+            </section>
+            <section class="case-study-block">
+                <p class="case-study-label">Development decisions</p>
+                <h2>Keep story logic separate from presentation.</h2>
+                <p>The project uses Python logic and modular Ren'Py scripts to separate persistent state and scene flow from individual presentation beats. That trade-off keeps the narrative easier to expand while preserving control over tone and timing.</p>
+            </section>
+            <section class="case-study-block">
+                <p class="case-study-label">Current state</p>
+                <h2>In development.</h2>
+                <p>Rizztaurant remains an independent project focused on interactive dialogue, expressive presentation, and a codebase that can support additional narrative chapters.</p>
+            </section>
         </div>
 
         <div class="project-links">
-            <a href="https://github.com/Jibbyie/RizztaurantDemo" class="btn-code" target="_blank"
-                rel="noopener noreferrer">View Source Code</a>
             <span class="btn-details" aria-disabled="true">Demo Coming Soon</span>
             <a href="../index.html#projects" class="btn-back">Back to Portfolio</a>
         </div>
