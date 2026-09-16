@@ -4,469 +4,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jibby's Corner</title>
+    <meta name="description" content="Jibril Abdulazeez is a Dublin-based gameplay programmer and game developer working across Unreal Engine 5, Unity, public releases, and personal projects.">
+    <title>Jibril Abdulazeez | Gameplay Programmer</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="/jibby.jpg" type="image/x-icon">
-    <style>
-        .filter-controls {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .filter-btn {
-            background-color: #333;
-            color: white;
-            border: 2px solid #555;
-            padding: 10px 20px;
-            margin: 5px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s, border-color 0.3s;
-        }
-
-        .filter-btn:hover {
-            background-color: #444;
-            border-color: #777;
-        }
-
-        .filter-btn.active {
-            background-color: #007bff;
-            border-color: #007bff;
-        }
-
-        /* Style for hiding projects */
-        .project.hide {
-            display: none;
-        }
-    </style>
+    <link rel="icon" href="jibby.jpg" type="image/x-icon">
 </head>
 
 <body>
     <header>
-        <div class="container">
-            <h1><a href="../index.html" style="color: white; text-decoration: none;">Home</a></h1>
-            <nav>
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="Jibril Abdulazeez home">Jibril Abdulazeez<span>.</span></a>
+            <nav aria-label="Primary navigation">
                 <ul>
-                    <li><a href="../index.html#about">About</a></li>
-                    <li><a href="https://github.com/Jibbyie" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                    <li><a href="https://jibbyie.itch.io/" target="_blank" rel="noopener noreferrer">Itch</a></li>
-                    <li><a href="../index.html#projects">Projects</a></li>
-                    <li><a href="../index.html#skills">Skills</a></li>
-                    <li><a href="../index.html#contact">Contact</a></li>
-                    <li><a href="../Tech_CV.pdf" target="_blank" class="nav-resume-button">Resume</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="CV_Jibril_Abdulazeez.pdf" target="_blank" rel="noopener noreferrer" class="nav-resume-button">Resume</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-
-
-    <section id="intro" class="hero">
-        <div class="container">
-            <h2>Hey! I’m Jibril. I build games that feel good to play.</h2>
-            <p>Gameplay Programmer · Indie Developer · Focused on Mastering Unity</p>
-        </div>
-    </section>
-
-    <!-- About Me Section -->
-    <section id="about">
-        <div class="container about-container">
-            <div class="about-image">
-                <img src="images/profile.jpg" alt="Jibril Abdulazeez Profile Picture">
-            </div>
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>
-                    I'm a gameplay programmer based in Dublin, Ireland, focused on building fun, responsive mechanics in Unity. 
-                    I’m currently working on game jams and larger solo projects.
-                </p>
-                <p>
-                    With a BSc in Computer Science (TU Dublin) and a Master’s in Creative Digital Media & UX in progress, 
-                    I bring both technical skill and player-focused design to every project.
-                </p>
-                <p>
-                    Whether collaborating with a team or building something on my own, my goal is to make games that stick with players.
-                </p>
-                <p>
-                    Always open to feedback, collaboration, or just talking dev. Feel free to reach out!
-                </p>
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- START: Highlighted Project -->
-    <section id="highlighted">
-        <div class="container">
-            <h2 style="color: white;">Highlighted Project</h2>
-            <div class="project highlighted-project">
-                <img src="images/dolphin/titlescreen.jpg" alt="It Ain’t That Deep Title Screen"
-                    style="width: 100%; object-fit: cover; object-position: center; display: block;">
-
-                <div class="project-info">
-                    <h3>It Ain’t That Deep (WIP)</h3>
-                    <div class="project-tech">
-                        <span>Unity 3D</span>
-                        <span>C#</span>
-                        <span>UX Research</span>
-                        <span>Thesis Project</span>
+    <main>
+        <section class="hero" id="intro">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Gameplay programmer · Production-minded developer</p>
+                    <h1>I build playable systems and help teams move games forward.</h1>
+                    <p class="hero-summary">I am a Dublin-based gameplay programmer focused on building interactive systems, shipping playable experiences, and contributing thoughtfully across production.</p>
+                    <div class="hero-actions">
+                        <a href="#experience" class="button button-primary">View experience</a>
+                        <a href="CV_Jibril_Abdulazeez.pdf" target="_blank" rel="noopener noreferrer" class="button button-secondary">Open resume</a>
                     </div>
-                    <p>
-                        An absurdist underwater sandbox developed with <strong>Jake Avra</strong> as our MSc capstone.
-                        Inspired by Goat Simulator & Untitled Goose Game, the project blends chaotic gameplay with
-                        UX-driven systems design. Still in development as we explore dialogue mechanics, quest
-                        mechanics, combat,
-                        responsive UI and more.
-                    </p>
-                    <ul class="project-highlights">
-                        <li>2.5D Isometric Game</li>
-                        <li>First Person Shooter Combat and Quest systems</li>
-                        <li>Pixel Crushers dialogue, environmental triggers, and dynamic AI</li>
-                    </ul>
-                    <div class="project-links">
-                        <a href="projects/ItAintThatDeep.html" class="btn-play">Project Details</a>
-                        <a href="https://github.com/Jibbyie/Dolphin-Simulator/tree/main/ItAintThatDeep" class="btn-code"
-                            target="_blank" rel="noopener noreferrer">View Source Code</a>
-                        <a href="https://www.figma.com/proto/n9toIfOKndeHJRaK6vc75C/Game-UI-Design?node-id=21-2&starting-point-node-id=21%3A2&t=DBwpjyBcXCoLqq1A-1"
-                            class="btn-play" target="_blank" rel="noopener noreferrer">View UI Prototype</a>
-                        <a href="" class="btn-details">Demo Coming Soon</a>
-                    </div>
+                </div>
+                <aside class="hero-note" aria-label="Current focus">
+                    <p class="note-label">Current focus</p>
+                    <p class="note-title">Building thoughtful, responsive game experiences with teams that care about the details.</p>
+                    <div class="note-rule"></div>
+                    <p class="note-meta">Dublin, Ireland<br>Available for game development and publishing opportunities</p>
+                </aside>
+            </div>
+        </section>
+
+        <section id="about" class="section section-light">
+            <div class="container about-grid">
+                <div>
+                    <p class="eyebrow">Profile</p>
+                    <h2>Technical craft, clear communication, and ownership.</h2>
+                </div>
+                <div class="about-copy">
+                    <p>I am a gameplay programmer who enjoys the work around the code as much as the code itself: clarifying a problem, shaping a plan, collaborating across disciplines, and helping a team deliver.</p>
+                    <p>At Black Pug Studio, I contributed to the development and release of NumWorlds across mobile and PC. I scoped and sequenced tasks, coordinated sprint work, integrated assets, worked closely with design and art, mentored interns, and supported launch readiness for the Steam release.</p>
+                    <p>Alongside professional work, I continue to lead and contribute to independent projects. My background in Computer Science and Creative Digital Media gives me a practical blend of engineering, analytical thinking, UX, and player-focused design.</p>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- END: Highlighted Project -->
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2 style="color: white;">Games</h2>
-
-            <div class="filter-controls">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="large-project">Large Projects</button>
-                <button class="filter-btn" data-filter="game-jam">Game Jams</button>
-                <button class="filter-btn" data-filter="demo">Playable Demo</button>
-                <button class="filter-btn" data-filter="prototype">Prototypes</button>
+        <section id="experience" class="section section-ink">
+            <div class="container">
+                <div class="section-heading light-heading">
+                    <div>
+                        <p class="eyebrow">Experience</p>
+                        <h2>From gameplay systems to launch readiness.</h2>
+                    </div>
+                    <p class="section-intro">I think beyond an individual feature, taking responsibility for the conditions that let a team do its best work and a release reach players.</p>
+                </div>
+                <article class="experience-entry">
+                    <div class="experience-date">Professional experience</div>
+                    <div class="experience-content">
+                        <h3>Gameplay Programmer <span>· Black Pug Studio</span></h3>
+                        <p class="experience-lede">Contributed to NumWorlds across mobile and PC, with broader responsibility for the PC port, Steam release, and team support.</p>
+                        <ul class="experience-list">
+                            <li>Scoped and sequenced tasks to turn project goals into actionable development work.</li>
+                            <li>Coordinated sprint work and collaborated closely with design and art to keep implementation moving.</li>
+                            <li>Integrated assets and supported the game through launch preparation, including Steam release readiness.</li>
+                            <li>Mentored interns and helped the team stay organised, productive, and aligned.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="experience-entry experience-entry-secondary">
+                    <div class="experience-date">Ongoing practice</div>
+                    <div class="experience-content">
+                        <h3>Lead Programmer <span>· Independent game team</span></h3>
+                        <p class="experience-lede">Leading programming on a four-person game team preparing a title for Steam. The project was showcased at Dublin Comic Con and is currently seeking a publisher.</p>
+                        <p class="experience-note">I have also led programming teams during game jams and presented at a national game development meetup, strengthening my ability to communicate ideas and work effectively with different people.</p>
+                    </div>
+                </article>
             </div>
-            <div class="project-cards">
-                
-                  <!-- Lasso Lass -->
-                <div class="project" data-category="game-jam">
-                    <div class="project-media">
-                        <img src="images/lassolass/combat.gif" alt="Lasso Lass Gameplay" class="project-gif">
+        </section>
+
+        <section id="projects" class="section section-projects">
+            <div class="container">
+                <div class="section-heading light-heading">
+                    <div>
+                        <p class="eyebrow">Projects</p>
+                        <h2>A portfolio across public releases and personal work.</h2>
                     </div>
-                    <div class="project-info">
-                        <h3>Lasso Lass</h3>
-                        <div class="project-tech">
-                            <span>Game Jam</span>
-                            <span>Playable Demo</span>
-                            <span>Unity 2D</span>
-                            <span>C#</span>
-                        </div>
-                        <p>A puzzle-platformer built in 4 days for the GMTK 2025 Game Jam with a 6-person team. 
-                            Use a magical lasso to interact with the environment, solve puzzles, and traverse the level.</p>
-                        <ul class="project-highlights">
-                            <li>Context-sensitive lasso for dynamic object interaction</li>
-                            <li>Puzzle design integrated with platforming challenges</li>
-                            <li>Developed collaboratively under a 4-day deadline</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="projects/LassoLass.html" class="btn-play">Project Details</a>
-                            <a href="https://github.com/Jibbyie/GMTK2025_GameJam"
-                                class="btn-code" target="_blank" rel="noopener noreferrer">View Source Code</a>
-                            <a href="https://jibbyie.itch.io/lassolass" class="btn-details" target="_blank"
-                                rel="noopener noreferrer">Play on Itch.io</a>
-                        </div>
+                    <p class="section-intro">Released work demonstrates production experience; personal projects show how I explore mechanics, systems, and collaboration independently.</p>
+                </div>
+                <div class="project-group">
+                    <div class="project-group-heading"><h3>Public Releases</h3><p>Commercial game development and release work.</p></div>
+                    <div class="project-cards project-cards-public">
+                        <article class="project-card project-card-public">
+                            <div class="project-media project-media-numworlds"><img src="https://numworlds.com/assets/nw_banner.jpg?v=1.0" alt="NumWorlds underwater world"></div>
+                            <div class="project-info">
+                                <p class="project-kicker">Public release · Unreal Engine 5 · Black Pug Studio</p>
+                                <h3>NumWorlds — Steam / PC</h3>
+                                <p>A cozy 3D number-chaining puzzle game with a handcrafted campaign of 200+ levels, Infinite Mode, and distinct worlds. I contributed to the PC port and Steam release as Lead Programmer and QA Lead.</p>
+                                <p class="project-role"><strong>Role:</strong> Lead Programmer, Gameplay Programmer, Interface Programmer, Audio Designer, and QA Lead.</p>
+                                <div class="project-links-inline"><a href="https://store.steampowered.com/app/4792970/NumWorlds/" class="text-link" target="_blank" rel="noopener noreferrer">Steam <span aria-hidden="true">&#8594;</span></a><a href="https://numworlds.com/" class="text-link" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">&#8594;</span></a><a href="https://numworlds.com/credits" class="text-link" target="_blank" rel="noopener noreferrer">View credits <span aria-hidden="true">&#8594;</span></a></div>
+                            </div>
+                        </article>
+                        <article class="project-card project-card-public">
+                            <div class="project-media project-media-numworlds"><img src="https://numworlds.com/assets/nw_banner.jpg?v=1.0" alt="NumWorlds mobile release artwork"></div>
+                            <div class="project-info">
+                                <p class="project-kicker">Public release · Mobile · Black Pug Studio</p>
+                                <h3>NumWorlds — Mobile</h3>
+                                <p>Mobile versions of NumWorlds are available on the App Store and Google Play. My contributions to the mobile version were focused on minor features, distinct from my broader PC and Steam responsibilities.</p>
+                                <div class="project-links-inline"><a href="https://play.google.com/store/apps/details?id=com.blackpugstudio.numworlds&hl=en_IEnu" class="text-link" target="_blank" rel="noopener noreferrer">Google Play <span aria-hidden="true">&#8594;</span></a><a href="https://apps.apple.com/ie/app/numworlds/id6736342660" class="text-link" target="_blank" rel="noopener noreferrer">App Store <span aria-hidden="true">&#8594;</span></a><a href="https://numworlds.com/" class="text-link" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">&#8594;</span></a><a href="https://numworlds.com/credits" class="text-link" target="_blank" rel="noopener noreferrer">View credits <span aria-hidden="true">&#8594;</span></a></div>
+                            </div>
+                        </article>
                     </div>
                 </div>
-
-                  <!-- Memory Dive -->
-                <div class="project" data-category="game-jam">
-                    <div class="project-media">
-                        <img src="images/memorydive/monsterhiding.gif" alt="Memory Dive Gameplay" class="project-gif">
-                    </div>
-                    <div class="project-info">
-                        <h3>Memory Dive</h3>
-                        <div class="project-tech">
-                            <span>Game Jam</span>
-                            <span>Playable Demo</span>
-                            <span>Unity 3D</span>
-                            <span>C#</span>
+                <div class="project-group project-group-personal">
+                    <div class="project-group-heading"><h3>Personal Projects</h3><p>Independent games, game jams, and experiments.</p></div>
+                    <div class="project-cards">
+                    <article class="project-card">
+                        <div class="project-media"><img src="images/lassolass/combat.gif" alt="Lasso Lass gameplay"></div>
+                        <div class="project-info">
+                            <p class="project-kicker">Lead programmer · GMTK 2025 · Unity 2D</p>
+                            <h3>Lasso Lass</h3>
+                            <p>A puzzle-platformer built in four days with a six-person team. I led programming, owned the core lasso system, and supported code reviews while we shaped the mechanic under a tight deadline.</p>
+                            <a href="projects/LassoLass.html" class="text-link">View project <span aria-hidden="true">&#8594;</span></a>
                         </div>
-                        <p>An underwater stealth-horror game built in 7 days for the 2025 Unpolished Game Jam about recovery and survival. 
-                            <br> Built with a 3 person team. 
-                            Dive deep to find lost objects, manage your oxygen, and hide in the seaweed to evade a creature that stalks you from the shadows.</p>
-                        <ul class="project-highlights">
-                            <li>Stealth system using environmental cover to hide</li>
-                            <li>Resource management (oxygen) to create tension</li>
-                            <li>Atmospheric horror built on limited visibility and sound</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="projects/MemoryDive.html" class="btn-play">Project Details</a>
-                            <a href="https://github.com/Jibbyie/Unpolished-GameJam"
-                                class="btn-code" target="_blank" rel="noopener noreferrer">View Source Code</a>
-                            <a href="https://jibbyie.itch.io/memorydive" class="btn-details" target="_blank"
-                                rel="noopener noreferrer">Play on Itch.io</a>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-media"><img src="images/memorydive/monsterhiding.gif" alt="Memory Dive gameplay"></div>
+                        <div class="project-info">
+                            <p class="project-kicker">Solo programmer · Unpolished Game Jam · Unity 3D</p>
+                            <h3>Memory Dive</h3>
+                            <p>An underwater stealth-horror game built in one week with a three-person team. I developed the gameplay systems, enemy AI, resource loop, and event-driven game flow.</p>
+                            <a href="projects/MemoryDive.html" class="text-link">View project <span aria-hidden="true">&#8594;</span></a>
                         </div>
-                    </div>
-                </div>
-
-                   <!-- Rizztaurant -->
-                <div class="project" data-category="large-project">
-                    <div class="project-media">
-                        <img src="images/rizztaurant/chefrizzrunsandcomesback.gif" alt="Rizztaurant Title Screen"
-                            class="project-gif">
-                    </div>
-                    <div class="project-info">
-                        <h3>Rizztaurant</h3>
-                        <div class="project-tech">
-                            <span>Large Project</span>
-                            <span>Ren'Py</span>
-                            <span>Python</span>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-media"><img src="images/rizztaurant/chefrizzrunsandcomesback.gif" alt="Rizztaurant visual novel gameplay"></div>
+                        <div class="project-info">
+                            <p class="project-kicker">Narrative systems · Ren'Py · Python</p>
+                            <h3>Rizztaurant</h3>
+                            <p>A comedic visual novel exploring branching dialogue, expressive character design, and the timing of interactive storytelling.</p>
+                            <a href="projects/Rizztaurant.html" class="text-link">View project <span aria-hidden="true">&#8594;</span></a>
                         </div>
-                        <p>A visual novel set in a chaotic restaurant where your choices shape the
-                            narrative.
-                            Built as a duo in Ren'Py with custom art, writing, and UI, a comedic exploration of
-                            branching
-                            dialogue and expressive character design.</p>
-                        <ul class="project-highlights">
-                            <li>Persistent branching dialogue built with Python and Ren'Py</li>
-                            <li>Hand-drawn characters, backgrounds, and UI</li>
-                            <li>Custom transitions, animations, and timed comedic beats</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="projects/Rizztaurant.html" class="btn-play">Project Details</a>
-                            <a href="https://github.com/Jibbyie/RizztaurantDemo" class="btn-code" target="_blank"
-                                rel="noopener noreferrer">View Source Code</a>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-media"><img src="images/dolphin/titlescreen.jpg" alt="It Ain't That Deep title screen"></div>
+                        <div class="project-info">
+                            <p class="project-kicker">MSc capstone · Unity 3D · C# · UX research</p>
+                            <h3>It Ain't That Deep</h3>
+                            <p>A research-driven 2.5D sandbox game developed with Jake Avra, combining player-driven interactions, dialogue, quests, combat, and iterative UX work.</p>
+                            <a href="projects/ItAintThatDeep.html" class="text-link">View project <span aria-hidden="true">&#8594;</span></a>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Lights Out -->
-                <div class="project" data-category="demo">
-                    <div class="project-media">
-                        <img src="images/lightsout/main.gif" alt="Lights Out" class="project-gif">
-                    </div>
-                    <div class="project-info">
-                        <h3>Lights Out</h3>
-                        <div class="project-tech">
-                            <span>Playable Demo</span>
-                            <span>Unity 3D</span>
-                            <span>C#</span>
-                        </div>
-                        <p>A short psychological horror prototype built in 3 days. You must keep the lights on to
-                            survive, but the longer you last, the more the room changes…</p>
-                        <ul class="project-highlights">
-                            <li>Randomized light switch and event system</li>
-                            <li>Timer-based blackout and fail state logic</li>
-                            <li>Audio layering and flicker effects for tension</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="projects/lightsout.html" class="btn-play">Project Details</a>
-                            <a href="https://jibbyie.itch.io/lights-out" class="btn-details" target="_blank"
-                                rel="noopener noreferrer">Download Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slimey -->
-                <div class="project" data-category="prototype">
-                    <div class="project-media">
-                        <img src="images/slimey/main.gif" alt="Slimey Grapple Demo" class="project-gif">
-                    </div>
-                    <div class="project-info">
-                        <h3>Slimey</h3>
-                        <div class="project-tech">
-                            <span>Prototype</span>
-                            <span>Unity2D</span>
-                            <span>C#</span>
-                            <span>Aseprite</span>
-                            <span>Single Player</span>
-                        </div>
-                        <p>A physics-based 2D grapple prototype where you swing around, build up spin, and boost through
-                            walls. It’s all about momentum and feel.</p>
-                        <ul class="project-highlights">
-                            <li>Rope-based grapple system with dynamic length</li>
-                            <li>Spin-charged dash mechanic for smashing breakables</li>
-                            <li>Camera shake, trails, and audio for feedback</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="projects/Slimey.html" class="btn-play">Project Details</a>
-                            <a href="https://github.com/Jibbyie/game-a-week/tree/origin/Wk2_GrappleSwinger"
-                                class="btn-code" target="_blank" rel="noopener noreferrer">View Source Code</a>
-                            <a href="https://jibbyie.itch.io/slimey" class="btn-details" target="_blank"
-                                rel="noopener noreferrer">Play on Itch.io</a>
-                        </div>
-
-
-                    </div>
-                </div>
-
-                <!-- Knock Knock -->
-                <div class="project" data-category="prototype">
-                    <div class="project-media">
-                        <img src="images/knockknock/peeking.gif" alt="Knock Knock" class="project-gif">
-                    </div>
-                    <div class="project-info">
-                        <h3>Knock Knock</h3>
-                        <div class="project-tech">
-                            <span>Prototype</span>
-                            <span>Unity3D</span>
-                            <span>C#</span>
-                            <span>Single Player</span>
-                        </div>
-                        <p>"Knock Knock" is a short psychological horror prototype where you're stuck in your apartment
-                            with strangers knocking at your door. Some are safe, some aren’t. You use a peephole and
-                            voice lines to figure out who’s who. I even got my friends to help voice it!</p>
-                        <ul class="project-highlights">
-                            <li>Randomised characters (safe vs. mimic)</li>
-                            <li>Audio-based anxiety distortion system</li>
-                            <li>Peephole interaction + proximity-based decisions</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="projects/knockknock.html" class="btn-play">Project Details</a>
-                            <a href="https://jibbyie.itch.io/knock-knock-poc" class="btn-details" target="_blank"
-                                rel="noopener noreferrer">Download Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Multiplayer -->
-                <div class="project" data-category="prototype">
-                    <div class="project-media">
-                        <img src="images/multiplayer/lobbysetup.gif" alt="Multiplayer 2D Test" class="project-gif">
-                    </div>
-                    <div class="project-info">
-                        <h3>2D Multiplayer</h3>
-                        <div class="project-tech">
-                            <span>Prototype</span>
-                            <span>Unity 2D</span>
-                            <span>C#</span>
-                            <span>Netcode for GameObjects</span>
-                        </div>
-                        <p>
-                            A sandbox for learning Unity multiplayer via NGO. Built from scratch to understand the basics: server
-                            authority,
-                            player ownership, and multiplayer UI syncing.
-                        </p>
-                        <ul class="project-highlights">
-                            <li>Server-authoritative damage, spawning, and player input</li>
-                            <li>NetworkVariables for real-time health syncing</li>
-                            <li>Prototype rematch flow, lobby testing, and UI ownership</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="projects/MultiplayerTest.html" class="btn-play">Project Details</a>
-                            <a href="https://github.com/Jibbyie/game-a-week/tree/origin/Multiplayer_NGO_Race"
-                                class="btn-code" target="_blank" rel="noopener noreferrer">View Source Code</a>
-                        </div>
+                    </article>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2>My Skills</h2>
-            <div class="skills-grid">
-
-                <div class="skill-category">
-                    <h3>Programming & Tech</h3>
-                    <ul>
-                        <li>C# (Intermediate – Unity-focused)</li>
-                        <li>C++ (Basic)</li>
-                        <li>Python (Basic, Ren'Py)</li>
-                        <li>JavaScript (Web Interactivity)</li>
-                        <li>HTML / CSS (Responsive Layouts, UI Styling)</li>
-                        <li>Git / GitHub (Team & Solo Workflow)</li>
-                        <li>Netcode for GameObjects (NGO)</li>
-                    </ul>
+        <section id="skills" class="section section-light">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Capabilities</p>
+                        <h2>Skills I bring into a production team.</h2>
+                    </div>
+                    <p class="section-intro">A practical toolkit spanning programming, game development, UX, and the communication needed to connect them.</p>
                 </div>
-
-                <div class="skill-category">
-                    <h3>Game Engines & Tools</h3>
-                    <ul>
-                        <li>Unity Engine (Intermediate – 2D, 3D, Multiplayer familiarity)</li>
-                        <li>Unreal Engine (Basic)</li>
-                        <li>Pixel Art Tools (Aseprite)</li>
-                        <li>Figma (High-Fidelity UI Prototypes)</li>
-                        <li>Adobe Suite (Photoshop, Premiere)</li>
-                    </ul>
+                <div class="skills-grid">
+                    <article class="skill-category"><h3>Programming</h3><p>C#, C++, Python, JavaScript, HTML, CSS, Git, GitHub, and Netcode for GameObjects.</p></article>
+                    <article class="skill-category"><h3>Engines and tools</h3><p>Unity across 2D, 3D, and multiplayer projects; Unreal Engine; Ren'Py; Figma; Aseprite; Photoshop; and Premiere.</p></article>
+                    <article class="skill-category"><h3>Design and UX</h3><p>Gameplay systems, balance, feedback loops, narrative design, dialogue writing, wireframing, prototyping, user testing, and accessible UI.</p></article>
+                    <article class="skill-category"><h3>Production and collaboration</h3><p>Task scoping, sequencing, sprint coordination, asset integration, mentoring, code reviews, presentation, and launch preparation.</p></article>
                 </div>
-
-                <div class="skill-category">
-                    <h3>Design & UX</h3>
-                    <ul>
-                        <li>Game Design (Systems, Balance, Feedback Loops)</li>
-                        <li>Narrative Design & Dialogue Writing</li>
-                        <li>UX Research (User Testing, Iterative Feedback)</li>
-                        <li>Wireframing / Prototyping (Figma, Paper, Unity UI)</li>
-                        <li>UI Design (Accessibility & Clarity)</li>
-                    </ul>
-                </div>
-
             </div>
-        </div>
-    </section>
-    <section id="contact">
-        <div class="container">
-            <h2>Connect With Me</h2>
-            <div class="social-links">
-                <a href="https://github.com/jibbyie" target="_blank" rel="noopener noreferrer"
-                    aria-label="GitHub Profile">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/jibril-abdulazeez/" target="_blank" rel="noopener noreferrer"
-                    aria-label="LinkedIn Profile">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://instagram.com/jibbyie" target="_blank" rel="noopener noreferrer"
-                    aria-label="Instagram Profile">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://jibbyie.itch.io" target="_blank" rel="noopener noreferrer"
-                    aria-label="Itch.io Profile">
-                    <i class="fab fa-itch-io"></i> </a>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container contact-grid">
+                <div><p class="eyebrow">Get in touch</p><h2>Let's talk about making better games.</h2></div>
+                <div><p>I am open to conversations about gameplay programming, production, publishing, and collaborative game development.</p><div class="contact-links"><a href="https://www.linkedin.com/in/jibril-abdulazeez/" target="_blank" rel="noopener noreferrer" class="button button-primary">Contact me on LinkedIn</a><a href="https://github.com/Jibbyie" target="_blank" rel="noopener noreferrer" class="text-link">GitHub <span aria-hidden="true">&#8594;</span></a><a href="https://jibbyie.itch.io/" target="_blank" rel="noopener noreferrer" class="text-link">Itch.io <span aria-hidden="true">&#8594;</span></a></div></div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer>
-        <div class="container">
-            <p>© 2025 Jibby's Corner</p>
-        </div>
-    </footer>
-    <script src="https://kit.fontawesome.com/c484d70e2a.js" crossorigin="anonymous"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-
-            const projects = document.querySelectorAll('#projects .project');
-
-            filterButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Set active class on button
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-
-                    const filter = button.dataset.filter;
-
-                    projects.forEach(project => {
-                        // Check if project should be shown
-                        if (filter === 'all' || project.dataset.category === filter) {
-                            project.classList.remove('hide');
-                        } else {
-                            project.classList.add('hide');
-                        }
-                    });
-                });
-            });
-        });
-    </script>
+    <footer><div class="container"><p>Jibril Abdulazeez · Gameplay programmer and production-minded developer</p><p>© 2026</p></div></footer>
 </body>
 
 </html>
