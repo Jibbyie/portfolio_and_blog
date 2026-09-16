@@ -13,18 +13,16 @@
 <body>
     <!-- Header Navigation -->
     <header>
-        <div class="container">
-            <h1><a href="../index.html" style="color: white; text-decoration: none;">Jibril Abdulazeez.</a></h1>
-            <nav>
+        <div class="container header-inner">
+            <a class="brand" href="../index.html" aria-label="Jibril Abdulazeez home">Jibril Abdulazeez<span>.</span></a>
+            <nav aria-label="Primary navigation">
                 <ul>
                     <li><a href="../index.html#about">About</a></li>
                     <li><a href="../index.html#experience">Experience</a></li>
-                    <li><a href="https://github.com/Jibbyie" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                    <li><a href="https://jibbyie.itch.io/" target="_blank" rel="noopener noreferrer">Itch</a></li>
                     <li><a href="../index.html#projects">Projects</a></li>
                     <li><a href="../index.html#skills">Skills</a></li>
                     <li><a href="../index.html#contact">Contact</a></li>
-                    <li><a href="../CV_Jibril_Abdulazeez.pdf" target="_blank" class="nav-resume-button">Resume</a></li>
+                    <li><a href="../CV_Jibril_Abdulazeez.pdf" target="_blank" rel="noopener noreferrer" class="nav-resume-button">Resume</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,9 +30,20 @@
     
     <!-- Main Project Content -->
     <main class="container project-detail">
-        <h1>Lasso Lass</h1>
+        <div class="project-header">
+            <div>
+                <p class="project-eyebrow">Personal project · GMTK 2025</p>
+                <h1>Lasso Lass</h1>
+                <p class="project-summary">A puzzle-platformer built around a gesture-driven lasso mechanic, developed under a four-day game-jam constraint.</p>
+            </div>
+            <span class="project-status">Game Jam</span>
+        </div>
 
-        <!-- Project Media Gallery -->
+        <div class="project-actions">
+            <a href="https://jibbyie.itch.io/lassolass" class="btn-play" target="_blank" rel="noopener noreferrer">Play on Itch.io</a>
+            <a href="https://github.com/Jibbyie/GMTK2025_GameJam" class="btn-code" target="_blank" rel="noopener noreferrer">View Source Code</a>
+        </div>
+
         <div class="project-showcase">
             <div class="main-media">
                 <!-- Main GIF Displayed on the Index Page -->
@@ -44,114 +53,89 @@
             </div>
             <div class="project-gallery">
                 <div class="gif-container">
-                    <img class="gif-thumb" src="/images/lassolass/tangible.gif" alt="Teleporting with the lasso"
+                    <img class="gif-thumb" src="../images/lassolass/tangible.gif" alt="Teleporting with the lasso"
                         data-caption="Lassoing intangible platforms & teleportation">
                     <p class="gif-caption">Lassoing intangible platforms & teleportation</p>
                 </div>
                 <div class="gif-container">
-                    <img class="gif-thumb" src="/images/lassolass/platforms.gif" alt="Platforming"
+                    <img class="gif-thumb" src="../images/lassolass/platforms.gif" alt="Platforming"
                         data-caption="Platforming">
                     <p class="gif-caption">Platforming</p>
                 </div>
                 <div class="gif-container">
-                    <img class="gif-thumb" src="/images/lassolass/puzzle.gif" alt="Activating pressure plates to solve a puzzle""
+                    <img class="gif-thumb" src="../images/lassolass/puzzle.gif" alt="Activating pressure plates to solve a puzzle"
                         data-caption="Activating pressure plates to solve a puzzle">
                     <p class="gif-caption">Activating pressure plates to solve a puzzle</p>
                 </div>
             </div>
         </div>
 
-        <!-- Project Metadata -->
         <div class="project-meta">
             <div class="meta-item">
-                <h3>Technologies</h3>
-                <ul>
-                    <li>Unity Engine (2D)</li>
-                    <li>C#</li>
-                </ul>
-            </div>
-            <div class="meta-item">
-                <h3>Timeline</h3>
-                <p>GMTK 2025 Game Jam (4 Days)</p>
+                <h3>My role</h3>
+                <p>Lead Programmer</p>
             </div>
             <div class="meta-item">
                 <h3>Team</h3>
-                <p>6-Person Team (including first-time jammers)</p>
+                <p>Six-person team</p>
+            </div>
+            <div class="meta-item">
+                <h3>Timeline</h3>
+                <p>GMTK 2025 · 4 days</p>
+            </div>
+            <div class="meta-item">
+                <h3>Technology</h3>
+                <p>Unity · C# · FMOD</p>
+            </div>
+            <div class="meta-item">
+                <h3>Status</h3>
+                <p>Playable release</p>
             </div>
         </div>
 
-        <!-- Detailed Project Description -->
-        <div class="project-content visually-focused-content">
-            <div class="content-column">
-                <div class="content-block">
-                    <h2>About the Project</h2>
-                    <p>
-                        Lasso Lass is a puzzle-platformer built in 4 days for GMTK 2025 by a 6-person team. The game centers around a magical lasso that triggers effects like teleportation and platform creation to solve challenges.
-                        <br><br>
-                        I was the lead programmer, overseeing all game mechanics and Git code reviews. I solely designed and implemented the core lasso system.
-                    </p>
-                </div>
-
-                <div class="content-block">
-                    <h2>Technical Highlights</h2>
-                    <ul>
-                        <li><strong>Robust Lasso Drawing System:</strong> Implemented a multi-layered system for capturing player input that uses time-based collection, distance-based fallbacks, and adaptive point requirements based on draw duration. This ensures the lasso feels responsive and consistent across different screen sizes and framerates.</li>
-                        <li><strong>Advanced Loop Detection:</strong> Developed two forms of loop detection: a primary check for self-intersection using a line-segment algorithm and a secondary check for simple closed shapes. This allows for both complex and simple lasso gestures to be recognized reliably.</li>
-                        <li><strong>Point-in-Polygon Detection:</strong> Used a ray-casting algorithm to accurately determine which `DetectableObject`s were inside the completed lasso shape, forming the core of the interaction mechanic.</li>
-                        <li><strong>Modular Interaction System:</strong> Designed a flexible system using a base `DetectableObject` class with a virtual `OnDetected()` method. This allowed the team to rapidly create new interactions (teleportation, possession, platform activation) by simply inheriting from the base class and overriding its behavior.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="content-column">
-                <div class="content-block">
-                    <h2>Development Focus</h2>
-                    <ul>
-                        <li>Designing a core mechanic that was both intuitive and deep enough for interesting puzzles.</li>
-                        <li>Collaborating effectively within a diverse team, integrating art, sound, and code.</li>
-                        <li>Managing scope and prioritizing features to deliver a polished experience in a short timeframe.</li>
-                        <li>Building a fun, satisfying player experience around the central concept of the lasso.</li>
-                    </ul>
-                </div>
-
-                <div class="content-block">
-                    <h2>What I Learned</h2>
-                    <ul>
-                        <li><strong>Implementing Complex Gameplay Mechanics:</strong> Gained practical experience translating complex geometric algorithms (line-segment intersection, point-in-polygon) into robust, functional C# code that served as the game's core mechanic.</li>
-                        <li><strong>Designing for Reliability:</strong> Learned to build an adaptive input system with multiple fallbacks (time-based, distance-based, adaptive point counts) to ensure the lasso felt consistent and responsive across different screen sizes and framerates.</li>
-                        <li><strong>Scalable & Modular Architecture:</strong> Solidified my understanding of polymorphism by designing the `DetectableObject` base class. This architecture allowed our team to rapidly add new, unique interactions (teleportation, possession, platform activation) without modifying the core lasso code.</li>
-                        <li><strong>Complex State Management:</strong> Practiced managing interdependent game states, such as disabling player input and switching camera control during the "Possession" mechanic, preventing conflicting behaviors and ensuring a smooth player experience.</li>
-                        <li><strong>Collaborative Development in a Jam Setting:</strong> Enhanced my ability to work effectively in a fast-paced team environment, using Git for version control and clear communication to integrate programming, art, and sound under a tight deadline.</li>
-                        <li><strong>Iterative Puzzle & Level Design:</strong> Learned to balance puzzle difficulty with player fun, iterating on level design to create challenges that were intuitive to understand but satisfying to solve using the core mechanics.</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="case-study-grid">
+            <section class="case-study-block case-study-wide">
+                <p class="case-study-label">My contribution</p>
+                <h2>Owning the mechanic that defines the game.</h2>
+                <p>As Lead Programmer, I oversaw the gameplay implementation and Git code reviews. I designed and implemented the core lasso system, then connected it to the level interactions the team needed to make the mechanic playable within the four-day deadline.</p>
+            </section>
+            <section class="case-study-block">
+                <p class="case-study-label">Technical highlights</p>
+                <h2>Gesture input as a reliable gameplay system.</h2>
+                <ul class="case-study-list">
+                    <li>Collected input using time-based sampling, distance-based fallbacks, and adaptive point requirements so the gesture remained responsive across different drawing speeds.</li>
+                    <li>Used line-segment intersection checks and closed-shape detection to recognise both complex and simple lasso gestures.</li>
+                    <li>Applied point-in-polygon detection to identify which detectable objects were inside the completed lasso.</li>
+                    <li>Built the interaction layer around a reusable <code>DetectableObject</code> base class and virtual <code>OnDetected()</code> behavior.</li>
+                </ul>
+            </section>
+            <section class="case-study-block">
+                <p class="case-study-label">Development challenges</p>
+                <h2>Challenge → approach → result</h2>
+                <ul class="case-study-list challenge-list">
+                    <li><strong>Gesture reliability:</strong> Raw mouse or touch paths varied with speed. Adaptive sampling and fallbacks made the lasso more consistent without requiring one exact drawing style.</li>
+                    <li><strong>Short deadline:</strong> A reusable interaction base let the team add teleportation, possession, and platform activation without rewriting the lasso itself.</li>
+                    <li><strong>Scope:</strong> I prioritised the lasso loop and its puzzle interactions first, giving the team a complete playable mechanic within four days.</li>
+                </ul>
+            </section>
+            <section class="case-study-block">
+                <p class="case-study-label">Development decisions</p>
+                <h2>Flexible systems over one-off interactions.</h2>
+                <p>The lasso was treated as an input and detection system rather than a collection of bespoke level scripts. This kept the mechanic extensible while allowing different objects to respond through their own implementations.</p>
+            </section>
+            <section class="case-study-block">
+                <p class="case-study-label">Outcome</p>
+                <h2>A playable jam release.</h2>
+                <p>The team shipped a playable puzzle-platformer on the GMTK 2025 deadline, with the lasso supporting traversal, puzzle solving, teleportation, possession, and platform activation.</p>
+            </section>
         </div>
 
-        <!-- Links to Play/View Code -->
         <div class="project-links">
-            <a href="https://jibbyie.itch.io/lassolass" class="btn-play" target="_blank"
-            rel="noopener noreferrer">Play on Itch.io</a>
-            <a href="https://github.com/Jibbyie/GMTK2025_GameJam"
-                class="btn-code" target="_blank" rel="noopener noreferrer">View Source Code</a>
             <a href="../index.html#projects" class="btn-back">Back to Projects</a>
         </div>
     </main>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Connect With Me</h2>
-            <div class="social-links">
-                <a href="https://github.com/jibbyie" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/jibril-abdulazeez/" target="_blank"><i
-                        class="fab fa-linkedin-in"></i></a>
-                <a href="https://instagram.com/jibbyie" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://jibbyie.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
