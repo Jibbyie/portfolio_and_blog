@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" class="us-document">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Unemployment Simulator is a darkly comedic Unreal Engine game in alpha, developed by Jibril Abdulazeez.">
+    <title>Unemployment Simulator | Alpha</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/unemployment-simulator.css">
+    <link rel="icon" href="../jibby.jpg" type="image/x-icon">
+</head>
+
+<body class="us-page">
+    <header>
+        <div class="container header-inner">
+            <a class="brand" href="../index.html" aria-label="Jibril Abdulazeez home">Jibril Abdulazeez<span>.</span></a>
+            <nav aria-label="Primary navigation">
+                <ul>
+                    <li><a href="../index.html#about">Profile</a></li>
+                    <li><a href="../index.html#experience">Experience</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#beyond-code">About Me</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                    <li><a href="../CV_Jibril_Abdulazeez.pdf" target="_blank" rel="noopener noreferrer" class="nav-resume-button">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="us-hero">
+            <div class="container us-hero-grid">
+                <div>
+                    <p class="us-eyebrow">Indie game development · Alpha</p>
+                    <h1>Unemployment <span>Simulator</span></h1>
+                    <p class="us-tagline">Survive the tiny apartment. Keep up appearances. Convince everyone you’re doing just fine.</p>
+                    <dl class="us-hero-meta">
+                        <div><dt>Role</dt><dd>Solo Developer</dd></div>
+                        <div><dt>Engine</dt><dd>Unreal Engine</dd></div>
+                        <div><dt>Platform</dt><dd>PC · Planned Steam release</dd></div>
+                    </dl>
+                </div>
+                <div class="us-poster">
+                    <img src="../images/unemployment_simulator/HighresScreenshot00001.png" alt="Low-poly view of the apartment living room and computer desk">
+                    <span class="us-stamp">Alpha gameplay</span>
+                    <div class="us-poster-bottom">
+                        <span class="us-panel-code">Solo project</span>
+                        <span class="us-panel-code">PC · Unreal Engine</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="us-section us-section-light">
+            <div class="container us-about">
+                <div>
+                    <p class="us-label">About the game</p>
+                    <h2>Every day is a fresh chance to hold it together.</h2>
+                </div>
+                <div class="us-about-copy" id="about-copy"></div>
+            </div>
+        </section>
+
+        <section class="us-section us-section-dark">
+            <div class="container">
+                <div class="us-section-heading">
+                    <div>
+                        <p class="us-label">Gameplay</p>
+                        <h2>A daily routine with increasingly absurd consequences.</h2>
+                    </div>
+                    <p>Feature descriptions outline the game’s intended design. See the development progress below for what is completed and what remains planned.</p>
+                </div>
+                <div class="us-feature-grid" id="feature-grid"></div>
+                <p class="us-disclaimer">These mechanics describe the intended game; they are not a claim that every feature is implemented.</p>
+            </div>
+        </section>
+
+        <section class="us-section us-section-light">
+            <div class="container">
+                <div class="us-section-heading">
+                    <div>
+                        <p class="us-label">Development</p>
+                        <h2>One developer, an apartment full of systems.</h2>
+                    </div>
+                </div>
+                <div class="us-development-grid" id="development-grid"></div>
+            </div>
+        </section>
+
+        <section class="us-section us-section-light">
+            <div class="container">
+                <div class="us-section-heading">
+                    <div>
+                        <p class="us-label">Progress</p>
+                        <h2>A work in progress, shared honestly.</h2>
+                    </div>
+                    <p>Milestones and targets can change as development continues.</p>
+                </div>
+                <div class="us-progress-grid" id="progress-grid"></div>
+                <p class="us-progress-note" id="progress-note"></p>
+            </div>
+        </section>
+
+        <section class="us-section us-section-light" aria-labelledby="media-title">
+            <div class="container">
+                <div class="us-section-heading">
+                    <div>
+                        <p class="us-label">Alpha gameplay</p>
+                        <h2 id="media-title">Inside the apartment.</h2>
+                    </div>
+                </div>
+                <p class="us-media-note">These are early development captures. Visuals, mechanics and systems may change as development continues.</p>
+                <section class="us-media-section" aria-labelledby="screenshots-title">
+                    <div class="us-media-subheading">
+                        <h3 id="screenshots-title">Screenshots</h3>
+                        <p>Explore the apartment and its interactive spaces.</p>
+                    </div>
+                    <div class="us-slideshow" id="screenshot-slideshow" role="region" aria-roledescription="carousel" aria-label="Alpha gameplay screenshots" tabindex="0">
+                        <figure class="us-slide">
+                            <div class="us-slide-frame">
+                                <img id="screenshot-image" src="../images/unemployment_simulator/HighresScreenshot00001.png" alt="Low-poly view of the apartment living room and computer desk">
+                            </div>
+                            <figcaption>
+                                <div>
+                                    <strong id="screenshot-title">The apartment living room</strong>
+                                    <span id="screenshot-caption">A first look around the player’s home.</span>
+                                </div>
+                                <div class="us-slide-meta">
+                                    <span id="screenshot-category" class="us-media-category">Environment</span>
+                                    <span id="screenshot-count" class="us-slide-count" aria-live="polite">1 / 5</span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                        <div class="us-slide-controls">
+                            <button type="button" id="screenshot-previous" aria-label="Show previous screenshot">Previous</button>
+                            <button type="button" id="screenshot-next" aria-label="Show next screenshot">Next</button>
+                        </div>
+                        <div class="us-thumbnails" id="screenshot-thumbnails" role="group" aria-label="Choose a screenshot"></div>
+                        <p class="us-media-error" id="screenshot-error" role="status" hidden>This screenshot could not be loaded.</p>
+                    </div>
+                </section>
+                <section class="us-media-section" aria-labelledby="videos-title">
+                    <div class="us-media-subheading">
+                        <h3 id="videos-title">Gameplay clips</h3>
+                        <p>Short clips of systems and interactions in the current alpha.</p>
+                    </div>
+                    <div class="us-video-grid" id="video-grid"></div>
+                </section>
+            </div>
+        </section>
+
+        <section class="us-section us-section-light">
+            <div class="container">
+                <div class="us-closing">
+                    <div>
+                        <p class="us-label">Current status</p>
+                        <h2>Alpha</h2>
+                        <p id="closing-copy"></p>
+                    </div>
+                    <span class="us-status">No public store page yet</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="us-page-footer">
+        <div class="container">
+            <p>Jibril Abdulazeez · Gameplay programmer and game developer</p>
+            <p>© 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        const project = {
+            about: [
+                "Unemployment Simulator is a single-player unemployment simulator and parody. Trapped in a small apartment, you face the daily struggle of surviving, searching for work, and pretending everything is fine. Its PS1-era visual direction pairs everyday domestic activities with absurd mechanics and escalating consequences.",
+                "The entire game takes place inside the apartment, where almost everything can be interacted with, picked up, or thrown. Each day contributes to a running score; the ultimate goal is to find employment."
+            ],
+            features: [
+                { title: "Survive the day", text: "Hunger, Hygiene, Energy and Fulfilment drain over time. Neglecting your needs makes each day harder to manage." },
+                { title: "Cook or burn the place down", text: "Cook food on the stove to restore hunger, but leave it unattended and it burns. Leave the stove on while sleeping and a house fire can end the run." },
+                { title: "Keep the roaches under control", text: "Food waste attracts roaches and flies. Pests drain your stats; squashing them earns combo points and escalating callouts." },
+                { title: "Dress for success", text: "A planned wardrobe of around 12 outfits, introduced by a 2D host with tutorials and voice lines. Clothing can affect activities, repeated wear brings odour penalties, and pyjamas help preserve stats during sleep." },
+                { title: "Keep up appearances", text: "Scheduled calls from your parents use branching visual-novel-style dialogue. Suspicion carries between calls, missed calls increase it, and too much can end your run." },
+                { title: "The job hunt", text: "Browse a parody of LinkedIn, with five opportunities each day drawn from a pool of 70. Most applications are automatically rejected." },
+                { title: "Survive the interview", text: "An accepted interview takes you to a maze as an interviewer hunts you. Survive for 60 seconds or find the exit to determine your chances of getting hired." },
+                { title: "Chase the best ending", text: "Getting hired ends the game with the best ending. Your score also reflects activities such as using the bin, playing darts and squashing pests; a Steam leaderboard is planned." }
+            ],
+            development: [
+                { title: "Gameplay systems", text: "Building the survival loop, interactive objects, daily routines, AI behaviour, and systems that connect actions across the apartment." },
+                { title: "UI and dialogue", text: "Developing the interface and dialogue flow for daily management, family calls, job applications, and interviews." },
+                { title: "Progression and game state", text: "Connecting daily scoring, run outcomes, persistent state, and the progression that leads towards employment." },
+                { title: "Solo development", text: "Taking the project from gameplay design through implementation and iteration in Unreal Engine." }
+            ],
+            progress: [
+                { status: "completed", title: "Completed", items: ["Stove and cooking system", "Wardrobe and outfit system", "Phone call system", "Save system for roaches and flies", "Job application and interview systems"] },
+                { status: "in-progress", title: "In Progress", items: ["Ongoing game development and iteration"] },
+                { status: "planned", title: "Planned", items: ["Polish and package a four-day demo", "Create a Steam store page and gather feedback through an itch.io demo"] }
+            ],
+            progressNote: "Steam Next Fest (22 February–1 March 2027) is a potential target, dependent on development progress and traction.",
+            media: {
+                screenshots: [
+                    {
+                        src: "../images/unemployment_simulator/HighresScreenshot00001.png",
+                        title: "Apartment living room",
+                        alt: "Low-poly view across the apartment living room, showing a desk and computer, dartboard and seating.",
+                        caption: "A wide look across the player’s living space.",
+                        category: "Environment"
+                    },
+                    {
+                        src: "../images/unemployment_simulator/HighresScreenshot00002.png",
+                        title: "Bedroom and wardrobe",
+                        alt: "The apartment bedroom with a bed, wardrobe, desk and yellow curtains.",
+                        caption: "The bedroom and outfit-selection space.",
+                        category: "Environment"
+                    },
+                    {
+                        src: "../images/unemployment_simulator/HighresScreenshot00004.png",
+                        title: "Darts in the living room",
+                        alt: "A dart has landed in the apartment dartboard above a small table.",
+                        caption: "A dartboard among the apartment furnishings.",
+                        category: "Gameplay"
+                    },
+                    {
+                        src: "../images/unemployment_simulator/HighresScreenshot00005.png",
+                        title: "Cooking on the stove",
+                        alt: "A pot containing food sits on the apartment stove, with an interaction indicator above it.",
+                        caption: "The cooking interaction in the kitchen.",
+                        category: "Gameplay"
+                    },
+                    {
+                        src: "../images/unemployment_simulator/HighresScreenshot00006.png",
+                        title: "Food and the kitchen bin",
+                        alt: "A food item is shown above the kitchen floor beside the stove and waste bin.",
+                        caption: "A food item and waste bin in the kitchen.",
+                        category: "Gameplay"
+                    }
+                ],
+                videos: [
+                    {
+                        src: "../images/unemployment_simulator/wardrobeminigame(selectoutfits).mp4",
+                        poster: "../images/unemployment_simulator/HighresScreenshot00002.png",
+                        title: "Wardrobe and outfit selection",
+                        caption: "A look at choosing an outfit through the wardrobe.",
+                        category: "Daily systems"
+                    },
+                    {
+                        src: "../images/unemployment_simulator/showcaseoflaptopinterfacewithbankandfoodordersystem.mp4",
+                        poster: "../images/unemployment_simulator/HighresScreenshot00001.png",
+                        title: "Laptop: banking and food orders",
+                        caption: "The laptop interface showing banking and food-order options.",
+                        category: "Apartment interactions"
+                    },
+                    {
+                        src: "../images/unemployment_simulator/phonedialoguesystem.mp4",
+                        poster: "../images/unemployment_simulator/HighresScreenshot00002.png",
+                        title: "Phone dialogue",
+                        caption: "A preview of the in-game phone dialogue system.",
+                        category: "Dialogue"
+                    },
+                    {
+                        src: "../images/unemployment_simulator/interviewprocess.mp4",
+                        poster: "../images/unemployment_simulator/HighresScreenshot00001.png",
+                        title: "Interview: caught by the interviewer",
+                        caption: "One possible interview sequence, from the initial interaction through being caught by the interviewer.",
+                        category: "Interview gameplay"
+                    },
+                    {
+                        src: "../images/unemployment_simulator/interactingwithdeliveryboxandtakingoutthetrash.mp4",
+                        poster: "../images/unemployment_simulator/HighresScreenshot00006.png",
+                        title: "Deliveries and taking out the trash",
+                        caption: "Interacting with a delivery box and taking rubbish outside.",
+                        category: "Apartment interactions"
+                    },
+                    {
+                        src: "../images/unemployment_simulator/eatingitemandtrashspawningcockroaches_destroyingcockroaches.mp4",
+                        poster: "../images/unemployment_simulator/HighresScreenshot00006.png",
+                        title: "Food waste and cockroaches",
+                        caption: "Eating, food waste, and interacting with cockroaches.",
+                        category: "Gameplay systems"
+                    },
+                    {
+                        src: "../images/unemployment_simulator/cookingsystem(withstatesfordifferentlevels).mp4",
+                        poster: "../images/unemployment_simulator/HighresScreenshot00005.png",
+                        title: "Cooking and food states",
+                        caption: "The cooking system showing different food states.",
+                        category: "Gameplay systems"
+                    },
+                    {
+                        src: "../images/unemployment_simulator/bullseyewithdarts(throwables).mp4",
+                        poster: "../images/unemployment_simulator/HighresScreenshot00004.png",
+                        title: "Darts and throwable objects",
+                        caption: "A dart thrown towards the apartment dartboard.",
+                        category: "Gameplay"
+                    }
+                ]
+            },
+            closing: "The project is in alpha, and development is ongoing. These early captures share the game’s current direction; a four-day demo is the next major milestone."
+        };
+
+        const createTextElement = (tag, className, text) => {
+            const element = document.createElement(tag);
+            if (className) element.className = className;
+            element.textContent = text;
+            return element;
+        };
+
+        const about = document.getElementById("about-copy");
+        project.about.forEach((text) => about.append(createTextElement("p", "", text)));
+
+        const featureGrid = document.getElementById("feature-grid");
+        project.features.forEach((feature, index) => {
+            const article = document.createElement("article");
+            article.className = "us-feature";
+            article.append(createTextElement("span", "us-feature-index", String(index + 1).padStart(2, "0")));
+            article.append(createTextElement("h3", "", feature.title));
+            article.append(createTextElement("p", "", feature.text));
+            featureGrid.append(article);
+        });
+
+        const developmentGrid = document.getElementById("development-grid");
+        project.development.forEach((item) => {
+            const article = document.createElement("article");
+            article.className = "us-development-card";
+            article.append(createTextElement("h3", "", item.title));
+            article.append(createTextElement("p", "", item.text));
+            developmentGrid.append(article);
+        });
+
+        const progressGrid = document.getElementById("progress-grid");
+        project.progress.forEach((group) => {
+            const section = document.createElement("section");
+            section.className = "us-progress-column";
+            section.dataset.status = group.status;
+            section.append(createTextElement("h3", "", group.title));
+            if (group.items.length) {
+                const list = document.createElement("ul");
+                group.items.forEach((item) => list.append(createTextElement("li", "", item)));
+                section.append(list);
+            } else {
+                section.append(createTextElement("p", "", "No milestones listed yet."));
+            }
+            progressGrid.append(section);
+        });
+        document.getElementById("progress-note").textContent = project.progressNote;
+        document.getElementById("closing-copy").textContent = project.closing;
+
+        let currentScreenshot = 0;
+        const screenshotImage = document.getElementById("screenshot-image");
+        const screenshotTitle = document.getElementById("screenshot-title");
+        const screenshotCaption = document.getElementById("screenshot-caption");
+        const screenshotCategory = document.getElementById("screenshot-category");
+        const screenshotCount = document.getElementById("screenshot-count");
+        const screenshotError = document.getElementById("screenshot-error");
+        const screenshotThumbnails = document.getElementById("screenshot-thumbnails");
+        const screenshotButtons = [];
+
+        const showScreenshot = (index) => {
+            currentScreenshot = (index + project.media.screenshots.length) % project.media.screenshots.length;
+            const item = project.media.screenshots[currentScreenshot];
+            screenshotImage.src = item.src;
+            screenshotImage.alt = item.alt;
+            screenshotTitle.textContent = item.title;
+            screenshotCaption.textContent = item.caption;
+            screenshotCategory.textContent = item.category;
+            screenshotCount.textContent = `${currentScreenshot + 1} / ${project.media.screenshots.length}`;
+            screenshotImage.dataset.currentSrc = item.src;
+            screenshotError.hidden = true;
+            screenshotButtons.forEach((button, buttonIndex) => {
+                button.setAttribute("aria-pressed", String(buttonIndex === currentScreenshot));
+            });
+        };
+
+        project.media.screenshots.forEach((item, index) => {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "us-thumbnail";
+            button.setAttribute("aria-label", `Show screenshot ${index + 1}: ${item.title}`);
+            button.setAttribute("aria-pressed", String(index === currentScreenshot));
+            const thumbnail = document.createElement("img");
+            thumbnail.src = item.src;
+            thumbnail.alt = "";
+            thumbnail.loading = "lazy";
+            button.append(thumbnail);
+            button.addEventListener("click", () => showScreenshot(index));
+            screenshotButtons.push(button);
+            screenshotThumbnails.append(button);
+        });
+
+        document.getElementById("screenshot-previous").addEventListener("click", () => showScreenshot(currentScreenshot - 1));
+        document.getElementById("screenshot-next").addEventListener("click", () => showScreenshot(currentScreenshot + 1));
+        document.getElementById("screenshot-slideshow").addEventListener("keydown", (event) => {
+            if (event.key === "ArrowLeft") {
+                event.preventDefault();
+                showScreenshot(currentScreenshot - 1);
+            } else if (event.key === "ArrowRight") {
+                event.preventDefault();
+                showScreenshot(currentScreenshot + 1);
+            }
+        });
+        screenshotImage.addEventListener("error", () => {
+            screenshotError.hidden = false;
+            screenshotError.textContent = `“${project.media.screenshots[currentScreenshot].title}” could not be loaded. Check that the file path is correct.`;
+        });
+        showScreenshot(currentScreenshot);
+
+        const videoGrid = document.getElementById("video-grid");
+        project.media.videos.forEach((item) => {
+            const figure = document.createElement("figure");
+            figure.className = "us-video-card";
+            const video = document.createElement("video");
+            video.controls = true;
+            video.preload = "none";
+            video.playsInline = true;
+            video.poster = item.poster;
+            video.setAttribute("aria-label", item.title);
+            video.src = item.src;
+            const error = createTextElement("p", "us-media-error", "");
+            error.hidden = true;
+            error.setAttribute("role", "status");
+            video.addEventListener("error", () => {
+                error.hidden = false;
+                error.textContent = "This video could not be loaded in this browser.";
+            });
+            const caption = document.createElement("figcaption");
+            caption.append(createTextElement("strong", "", item.title));
+            caption.append(createTextElement("span", "", item.caption));
+            if (item.category) caption.append(createTextElement("small", "us-media-category", item.category));
+            figure.append(video, error, caption);
+            videoGrid.append(figure);
+        });
+    </script>
+</body>
+
+</html>
