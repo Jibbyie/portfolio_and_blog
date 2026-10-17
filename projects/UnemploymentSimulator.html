@@ -240,56 +240,56 @@
                 ],
                 videos: [
                     {
-                        src: "../images/unemployment_simulator/wardrobeminigame(selectoutfits).mp4",
+                        youtube: "7jZ3FTIo72s",
                         poster: "../images/unemployment_simulator/HighresScreenshot00002.png",
                         title: "Wardrobe and outfit selection",
                         caption: "A look at choosing an outfit through the wardrobe.",
                         category: "Daily systems"
                     },
                     {
-                        src: "../images/unemployment_simulator/showcaseoflaptopinterfacewithbankandfoodordersystem.mp4",
+                        youtube: "o2SgIC6sh6A",
                         poster: "../images/unemployment_simulator/HighresScreenshot00001.png",
                         title: "Laptop: banking and food orders",
                         caption: "The laptop interface showing banking and food-order options.",
                         category: "Apartment interactions"
                     },
                     {
-                        src: "../images/unemployment_simulator/phonedialoguesystem.mp4",
+                        youtube: "38nlpacyA7I",
                         poster: "../images/unemployment_simulator/HighresScreenshot00002.png",
                         title: "Phone dialogue",
                         caption: "A preview of the in-game phone dialogue system.",
                         category: "Dialogue"
                     },
                     {
-                        src: "../images/unemployment_simulator/interviewprocess.mp4",
+                        youtube: "rPrY7Ci1FBw",
                         poster: "../images/unemployment_simulator/HighresScreenshot00001.png",
                         title: "Interview: caught by the interviewer",
                         caption: "One possible interview sequence, from the initial interaction through being caught by the interviewer.",
                         category: "Interview gameplay"
                     },
                     {
-                        src: "../images/unemployment_simulator/interactingwithdeliveryboxandtakingoutthetrash.mp4",
+                        youtube: "2IobxUIf8TM",
                         poster: "../images/unemployment_simulator/HighresScreenshot00006.png",
                         title: "Deliveries and taking out the trash",
                         caption: "Interacting with a delivery box and taking rubbish outside.",
                         category: "Apartment interactions"
                     },
                     {
-                        src: "../images/unemployment_simulator/eatingitemandtrashspawningcockroaches_destroyingcockroaches.mp4",
+                        youtube: "HlJO5QCF7cE",
                         poster: "../images/unemployment_simulator/HighresScreenshot00006.png",
                         title: "Food waste and cockroaches",
                         caption: "Eating, food waste, and interacting with cockroaches.",
                         category: "Gameplay systems"
                     },
                     {
-                        src: "../images/unemployment_simulator/cookingsystem(withstatesfordifferentlevels).mp4",
+                        youtube: "zDDYv2iAHg8",
                         poster: "../images/unemployment_simulator/HighresScreenshot00005.png",
                         title: "Cooking and food states",
                         caption: "The cooking system showing different food states.",
                         category: "Gameplay systems"
                     },
                     {
-                        src: "../images/unemployment_simulator/bullseyewithdarts(throwables).mp4",
+                        youtube: "XxpHVbQlcVU",
                         poster: "../images/unemployment_simulator/HighresScreenshot00004.png",
                         title: "Darts and throwable objects",
                         caption: "A dart thrown towards the apartment dartboard.",
@@ -410,25 +410,34 @@
         project.media.videos.forEach((item) => {
             const figure = document.createElement("figure");
             figure.className = "us-video-card";
-            const video = document.createElement("video");
-            video.controls = true;
-            video.preload = "none";
-            video.playsInline = true;
-            video.poster = item.poster;
-            video.setAttribute("aria-label", item.title);
-            video.src = item.src;
-            const error = createTextElement("p", "us-media-error", "");
-            error.hidden = true;
-            error.setAttribute("role", "status");
-            video.addEventListener("error", () => {
-                error.hidden = false;
-                error.textContent = "This video could not be loaded in this browser.";
+
+            const player = document.createElement("button");
+            player.type = "button";
+            player.setAttribute("aria-label", `Play video: ${item.title}`);
+            player.style.cssText = "position:relative;display:block;width:100%;aspect-ratio:16/9;padding:0;border:0;cursor:pointer;background:#000 center/cover no-repeat;";
+            player.style.backgroundImage = `url("${item.poster}")`;
+
+            const play = document.createElement("span");
+            play.setAttribute("aria-hidden", "true");
+            play.textContent = "\u25B6";
+            play.style.cssText = "position:absolute;inset:0;margin:auto;width:68px;height:48px;line-height:48px;border-radius:12px;background:rgba(0,0,0,.7);color:#fff;font-size:22px;text-align:center;";
+            player.append(play);
+
+            player.addEventListener("click", () => {
+                const frame = document.createElement("iframe");
+                frame.src = `https://www.youtube-nocookie.com/embed/${item.youtube}?autoplay=1&rel=0`;
+                frame.title = item.title;
+                frame.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+                frame.allowFullscreen = true;
+                frame.style.cssText = "display:block;width:100%;aspect-ratio:16/9;border:0;";
+                player.replaceWith(frame);
             });
+
             const caption = document.createElement("figcaption");
             caption.append(createTextElement("strong", "", item.title));
             caption.append(createTextElement("span", "", item.caption));
             if (item.category) caption.append(createTextElement("small", "us-media-category", item.category));
-            figure.append(video, error, caption);
+            figure.append(player, caption);
             videoGrid.append(figure);
         });
     </script>
